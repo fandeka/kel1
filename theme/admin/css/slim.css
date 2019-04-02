@@ -165,7 +165,7 @@ body {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #868ba1;
+  color: #0e0105;
   text-align: left;
   background-color: #f0f2f7; }
 
@@ -243,12 +243,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #1b84e7;
+  color: #f30e4f;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #115da4;
+    color: #f50819;
     text-decoration: none; }
 
 a:not([href]):not([tabindex]) {
@@ -11584,7 +11584,7 @@ textarea.parsley-success:focus {
   font-weight: 700;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
   .slim-logo a {
-    color: #1b84e7; }
+    color: #f9084c; }
   @media (min-width: 992px) {
     .slim-logo {
       font-size: 36px;
@@ -12035,7 +12035,7 @@ textarea.parsley-success:focus {
     .slim-navbar .nav-link .icon {
       font-size: 24px;
       line-height: 0;
-      color: #1b84e7; }
+      color: #e71b6a; }
       @media (min-width: 992px) {
         .slim-navbar .nav-link .icon {
           margin-right: 8px; } }
