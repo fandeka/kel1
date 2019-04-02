@@ -42,7 +42,7 @@
             <div class="sub-item">
               <ul>
                 <li><a href="<?php echo site_url("penilaian/index"); ?>">Penilaian</a></li>
-                <li><a href="page-invoice.html">Hasil Tes</a></li>
+                <li><a href="<?php echo site_url("penilaian/add_penilaian"); ?>">Hasil Tes</a></li>
               </ul>
             </div><!-- dropdown-menu -->
           </li>
