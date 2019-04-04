@@ -57,7 +57,7 @@ class Tim extends CI_Controller {
                         $this->load->library('upload', $config);
 
                         if($_FILES["foto_tim"]["size"] > 0)
-                                if ( ! $this->upload->do_upload('foto_tim')){
+                                if (!$this->upload->do_upload('foto_tim')){
                                     $error = array('error' => $this->upload->display_errors());
                         
                                     $this->load->view('upload_form', $error);
