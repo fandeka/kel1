@@ -46,13 +46,10 @@
               <thead>
                 <tr>
                     <th class="wd-5p">No</th>
+                    <th class="wd-5p">Foto</th>
                     <th class="wd-15p">Nama</th>
                     <th class="wd-10p">Pangkat</th>
                     <th class="wd-10p">NRP</th>
-                    <th class="wd-10p">Korps</th>
-                    <th class="wd-10p">Jabatan</th>
-                    <th class="wd-10p">Kesatuan</th>
-                    <th class="wd-10p">Matra</th>
                     <th class="wd-5p">Aksi</th>
                 </tr>
               </thead>
@@ -61,17 +58,24 @@
                         <?php foreach($tim_rikkes as $rikkes){?>
                           <tr>
                               <td><?php echo $no++; ?></td>
-                              <td><?php echo $rikkes->nama; ?></td>
+                              <td>
+                                <?php
+                                    $img = base_url("uploads/default.png");
+                                    if($rikkes->foto != ""){
+                                        $img = $this->config->item('base_url').'uploads/foto_tim/'.$rikkes->foto; 
+                                    }  
+                                ?>
+                                <img src="<?php echo $img; ?>" class="img-circle" style="height: 50px; width: 50px;">
+                              </td>
+                              <td>
+                                <?php echo anchor('tim/tim_rinci/'.$rikkes->id, $rikkes->nama, 'title="Detail"'); ?>
+                              </td>
                               <td><?php echo $rikkes->pangkat; ?></td>
                               <td><?php echo $rikkes->nrp; ?></td>
-                              <td><?php echo $rikkes->korps; ?></td>
-                              <td><?php echo $rikkes->jabatan; ?></td>
-                              <td><?php echo $rikkes->kesatuan; ?></td>
-                              <td><?php echo $rikkes->matra; ?></td>
                               <td>
                                       <a href="<?php echo site_url("tim/edit_tim/".$rikkes->id); ?>">
                                       <i class="fa fa-pencil"></i></a>
-                                          
+                                       <span></span>   
                                       <a href="<?php echo site_url("tim/delete_tim/".$rikkes->id); ?>" onclick="return confirm('are you sure to delete?')" class=""> 
                                       <i class="fa fa-trash"></i></a>
                               </td>
