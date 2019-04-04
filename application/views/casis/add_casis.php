@@ -80,33 +80,33 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label class="form-control-label">Nama: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="nama" placeholder="">
+                  <input class="form-control" type="text" name="nama" placeholder="" required>
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="form-group mg-md-l--1 mg-md-t-0">
                   <label class="form-control-label">Tempat Lahir: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="tempat_lahir" placeholder="">
+                  <input class="form-control" type="text" name="tempat_lahir" placeholder="" required>
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4 mg-t--1 mg-md-t-0">
                 <div class="form-group mg-md-l--1">
                 
                     <label class="form-control-label"><i class="icon ion-calendar tx-16 lh-50 op-20"></i> Tanggal Lahir: <span class="tx-danger">*</span></label>
-                    <input id="datepickerNoOfMonths" type="text" class="form-control" placeholder="DD-MM-YYYY" name="tanggal_lahir">
+                    <input id="datepickerNoOfMonths" type="text" class="form-control" placeholder="DD-MM-YYYY" name="tanggal_lahir" required>
                
                 </div>
               </div>
               <div class="col-md-8">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">No Casis: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="no_casis" placeholder="">
+                  <input class="form-control" type="text" name="no_casis" placeholder="" required>
                 </div>
               </div><!-- col-4 --><!-- col-4 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="">Jenis Kelamin: <span class="tx-danger">*</span></label>
-                  <select class="form-control select2-show-search" data-placeholder="Pilih Salah Satu">
+                  <select class="form-control select2-show-search" data-placeholder="Pilih Salah Satu" required>
                         <option label="Choose one"></option>
                         <option value="Pria">Pria</option>
                         <option value="Wanita">Wanita</option>
@@ -116,31 +116,31 @@
               <div class="col-md-4">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">Program: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="program" placeholder="">
+                  <input class="form-control" type="text" name="program" placeholder="" required>
                 </div>
               </div><!-- col-4 --><!-- col-4 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Universitas: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="universitas" placeholder="">
+                  <input class="form-control" type="text" name="universitas" placeholder="" required>
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">IPK : <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="ipk" placeholder="">
+                  <input class="form-control" type="text" name="ipk" placeholder="" required>
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-6">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">Panda: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="panda" placeholder="">
+                  <input class="form-control" type="text" name="panda" placeholder="" required>
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-6">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Kelas: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="kelas" placeholder="">
+                  <input class="form-control" type="text" name="kelas" placeholder="" required>
                 </div>
               </div><!-- col-8 -->
             </div><!-- row -->
