@@ -31,7 +31,7 @@ class Tim extends CI_Controller {
                 $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
                 $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'trim|required');
                 $this->form_validation->set_rules('pangkat', 'Pangkat', 'trim|required');
-                $this->form_validation->set_rules('nrp', 'NRPr', 'trim|required');
+                $this->form_validation->set_rules('nrp', 'NRP', 'trim|required');
                 $this->form_validation->set_rules('korps', 'Korps', 'trim|required');
                 $this->form_validation->set_rules('jabatan', 'Jabatan', 'trim|required');
                 $this->form_validation->set_rules('kesatuan', 'Kesatuan', 'trim|required');
@@ -83,7 +83,7 @@ class Tim extends CI_Controller {
                             $this->common_model->data_insert("tim",
                                 array(
                                 "nama"=>$nama,
-                                "tanggal_lahir"=>$tanggal_lahir,
+                                "tanggal_lahir"=>date("Y-m-d", strtotime($tanggal_lahir)),
                                 "pangkat"=>$pangkat,
                                 "nrp"=>$nrp,
                                 "korps"=>$korps,
