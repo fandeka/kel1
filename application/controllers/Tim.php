@@ -13,11 +13,11 @@ class Tim extends CI_Controller {
 	{ 
 		if(_is_user_login($this)){
             $data['status_tim'] = 'active';
-            // $data = array();
-            // $this->load->model("tim_model");
-            // $data["tim_rikkes"] = $this->tim_model->get_users_filter_by_flag_del();
-            // $this->load->view("tim/index",$data);
+            $data = array();
+            $this->load->model("tim_model");
+            $data["tim_rikkes"] = $this->tim_model->get_tim_filter_by_flag_del();
             $this->load->view("tim/index",$data);
+            
         }
     }
 

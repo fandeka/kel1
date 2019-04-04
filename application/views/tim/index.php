@@ -47,27 +47,37 @@
                 <tr>
                     <th class="wd-5p">No</th>
                     <th class="wd-15p">Nama</th>
-                    <th class="wd-15p">Pangkat</th>
-                    <th class="wd-15p">NRP</th>
-                    <th class="wd-15p">Korps</th>
-                    <th class="wd-15p">Jabatan</th>
-                    <th class="wd-15p">Kesatuan</th>
-                    <th class="wd-15p">Matra</th>
-                    <th class="wd-10p">Aksi</th>
+                    <th class="wd-10p">Pangkat</th>
+                    <th class="wd-10p">NRP</th>
+                    <th class="wd-10p">Korps</th>
+                    <th class="wd-10p">Jabatan</th>
+                    <th class="wd-10p">Kesatuan</th>
+                    <th class="wd-10p">Matra</th>
+                    <th class="wd-5p">Aksi</th>
                 </tr>
               </thead>
               <tbody>
-                  <tr>
-                    <td>dd</td>
-                    <td>dd</td>
-                    <td>dd</td>
-                    <td>dd</td>
-                    <td>dd</td>
-                    <td>dd</td>
-                    <td>dd</td>
-                    <td>dd</td>
-                    <td>dd</td>
-                  </tr>
+                  <?php $no = 1; ?>
+                        <?php foreach($tim_rikkes as $rikkes){?>
+                          <tr>
+                              <td><?php echo $no++; ?></td>
+                              <td><?php echo $rikkes->nama; ?></td>
+                              <td><?php echo $rikkes->pangkat; ?></td>
+                              <td><?php echo $rikkes->nrp; ?></td>
+                              <td><?php echo $rikkes->korps; ?></td>
+                              <td><?php echo $rikkes->jabatan; ?></td>
+                              <td><?php echo $rikkes->kesatuan; ?></td>
+                              <td><?php echo $rikkes->matra; ?></td>
+                              <td>
+                                      <a href="<?php echo site_url("tim/edit_tim/".$rikkes->id); ?>">
+                                      <i class="fa fa-pencil"></i></a>
+                                          
+                                      <a href="<?php echo site_url("tim/delete_tim/".$rikkes->id); ?>" onclick="return confirm('are you sure to delete?')" class=""> 
+                                      <i class="fa fa-trash"></i></a>
+                              </td>
+
+                          </tr>
+                    <?php } ?>
               </tbody>
             </table>
           </div><!-- table-wrapper -->
