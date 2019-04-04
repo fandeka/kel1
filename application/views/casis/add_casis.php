@@ -96,7 +96,23 @@
                     <input id="datepickerNoOfMonths" type="text" class="form-control" placeholder="DD-MM-YYYY" name="tanggal_lahir">
                
                 </div>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group bd-t-0-force">
+                  <label class="form-control-label">No Casis: <span class="tx-danger">*</span></label>
+                  <input class="form-control" type="text" name="no_casis" placeholder="">
+                </div>
               </div><!-- col-4 --><!-- col-4 -->
+              <div class="col-md-4">
+                <div class="form-group mg-md-l--1 bd-t-0-force">
+                  <label class="">Jenis Kelamin: <span class="tx-danger">*</span></label>
+                  <select class="form-control select2-show-search" data-placeholder="Pilih Salah Satu">
+                        <option label="Choose one"></option>
+                        <option value="Pria">Pria</option>
+                        <option value="Wanita">Wanita</option>
+                  </select>
+                </div>
+              </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">Program: <span class="tx-danger">*</span></label>
