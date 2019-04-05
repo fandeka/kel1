@@ -33,28 +33,21 @@
 
           <label class="section-title">Penilaian</label>
           <p class="mg-b-20 mg-sm-b-40">Untuk melakukan penilaian, silahkan Anda klik button di samping setiap nama</p>
-          <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <div class="demo-btn-list">
-                <a href="<?php echo site_url("casis/add_casis"); ?>" class="btn btn-primary btn-icon rounded-circle"><div><i class="icon ion-plus-circled"></i></div></a>
-              </div>
-            </div>
-          </div>
+
           <br>
           <div class="table-wrapper">
             <table id="datatable1" class="table display responsive nowrap">
               <thead>
                 <tr>
                     <th class="wd-5p">No</th>
-                    <th class="">No Pus</th>
-                    <th class="">NAMA/TTL/PRODI/ASAL/PANDA/JENIS KELAMIN/KELAS</th>
-                    <th class="">Tempat</th>
-                    <th class="">Tgl Lahir</th>
-                    <th class="">Program</th>
-                    <th class="">Universitas</th>
-                    <th class="">IPK</th>
-                    <th class="">PANDA</th>
-                    <th class="">KELAS</th>
+                    <th class="wd-10p">No Casis</th>
+                    <th class="wd-10p">NAMA</th>
+                    <th class="wd-10p">TTL</th>
+                    <th class="wd-10p">Program</th>
+                    <th class="wd-10p">Universitas</th>
+                    <th class="wd-10p">IPK</th>
+                    <th class="wd-10p">PANDA</th>
+                    <th class="wd-10p">KELAS</th>
                     <th class="wd-5p">AKSI</th>
                 </tr>
               </thead>
@@ -69,8 +62,8 @@
                     <td>7</td>
                     <td>8</td>
                     <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
+
+                    <td><a href="<?php echo site_url("penilaian/add_nilai"); ?>" class="btn btn-primary btn-icon rounded-circle"><div><i class="icon ion-plus-circled"></i></div></a></td>
                   </tr>
                   <tr>
                     <td>1</td>
@@ -82,8 +75,8 @@
                     <td>7</td>
                     <td>8</td>
                     <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
+
+                    <td><a href="<?php echo site_url("penilaian/add_nilai"); ?>" class="btn btn-primary btn-icon rounded-circle"><div><i class="icon ion-plus-circled"></i></div></a></td>
                   </tr>
               </tbody>
             </table>
