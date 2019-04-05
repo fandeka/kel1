@@ -27,8 +27,9 @@ class Casis extends CI_Controller {
             $data["error"] = "";
             if($_POST){
                 $this->load->library('form_validation');
-                
+                $this->form_validation->set_rules('no_casis', 'No Casis', 'trim|required');
                 $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
+                //$this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
                 $this->form_validation->set_rules('tempat_lahir', 'Nama', 'trim|required');
                 $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'trim|required');
                 $this->form_validation->set_rules('program', 'Program', 'trim|required');
@@ -64,8 +65,9 @@ class Casis extends CI_Controller {
                                     $file_name = $file_data["file_name"];
                                     
                                 }     
-
+                            $no_casis = $this->input->post("no_casis");
                             $nama = $this->input->post("nama");
+                            $jenis_kelamin = $this->input->post("jenis_kelamin");
                             $tempat_lahir = $this->input->post("tempat_lahir");
                             $tanggal_lahir = $this->input->post("tanggal_lahir");
                             $program = $this->input->post("program");
@@ -78,9 +80,11 @@ class Casis extends CI_Controller {
                             $this->load->model("common_model");
                             $this->common_model->data_insert("casis",
                                 array(
+                                "no_casis" => $no_casis,
                                 "nama"=>$nama,
+                                "j_kel" => $jenis_kelamin,
                                 "tempat_lahir"=>$tempat_lahir,
-                                "tanggal_lahir"=>$tanggal_lahir,
+                                "tanggal_lahir"=>date("Y-m-d", strtotime($tanggal_lahir)),
                                 "program"=>$program,
                                 "universitas"=>$universitas,
                                 "ipk"=>$ipk,

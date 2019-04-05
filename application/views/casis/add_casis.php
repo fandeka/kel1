@@ -56,7 +56,7 @@
 
 
 
-          <form action="#" method="post">
+          <form action="#" method="post" enctype="multipart/form-data">
 
          
                 <div class="row">
@@ -106,7 +106,7 @@
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="">Jenis Kelamin: <span class="tx-danger">*</span></label>
-                  <select class="form-control select2-show-search" data-placeholder="Pilih Salah Satu" required>
+                  <select name="jenis_kelamin" class="form-control select2-show-search" data-placeholder="Pilih Salah Satu">
                         <option label="Choose one"></option>
                         <option value="Pria">Pria</option>
                         <option value="Wanita">Wanita</option>
