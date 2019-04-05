@@ -13,13 +13,14 @@ class Casis extends CI_Controller {
 	{ 
 		if(_is_user_login($this)){
             $data['status_casis'] = 'active';
-            // $data = array();
-            // $this->load->model("tim_model");
-            // $data["tim_rikkes"] = $this->tim_model->get_users_filter_by_flag_del();
-            // $this->load->view("tim/index",$data);
+            $data = array();
+            $this->load->model("casis_model");
+            $data["casis_rikes"] = $this->casis_model->get_casis_filter_by_flag_del();
             $this->load->view("casis/index",$data);
         }
     }
+
+   
 
     public function add_casis(){
         if(_is_user_login($this)){
@@ -29,7 +30,7 @@ class Casis extends CI_Controller {
                 $this->load->library('form_validation');
                 $this->form_validation->set_rules('no_casis', 'No Casis', 'trim|required');
                 $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
-                //$this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
+                $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
                 $this->form_validation->set_rules('tempat_lahir', 'Nama', 'trim|required');
                 $this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'trim|required');
                 $this->form_validation->set_rules('program', 'Program', 'trim|required');

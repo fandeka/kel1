@@ -31,8 +31,11 @@
 
         <div class="section-wrapper">
 
-          <label class="section-title">Basic Responsive DataTable</label>
-          <p class="mg-b-20 mg-sm-b-40">Searching, ordering and paging goodness will be immediately added to the table, as shown in this example.</p>
+          <label class="section-title">Daftar Nama Casis</label>
+          <p class="mg-b-20 mg-sm-b-40">
+            
+            
+          </p>
           <div class="row">
             <div class="col-md-6 col-lg-4">
               <div class="demo-btn-list">
@@ -45,46 +48,59 @@
             <table id="datatable1" class="table display responsive nowrap">
               <thead>
                 <tr>
-                    <th class="wd-5p">No</th>
-                    <th class="">No Pus</th>
+                    <th class="wd-7p">No</th>
+                    <th class="">NoCasis</th>
                     <th class="">Nama</th>
-                    <th class="">Tempat</th>
-                    <th class="">Tgl Lahir</th>
+                    <th class="">Tempat Lahir</th>
+                    <th class="">Tanggal Lahir</th>
+                    <th class="">j. Kelamin</th>
                     <th class="">Program</th>
+                    <th class="">IPk</th>
                     <th class="">Universitas</th>
-                    <th class="">IPK</th>
-                    <th class="">PANDA</th>
-                    <th class="">KELAS</th>
-                    <th class="wd-5p">AKSI</th>
+                    <th class="">Panda</th>
+                    <th class="">Kelas</th>
+                    <th class="">Foto</th>
+                    <th class="wd-7p">AKSI</th>
                 </tr>
               </thead>
               <tbody>
+                  <?php $no = 1; ?>
+                        <?php foreach($casis_rikes as $casis){?>
                   <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
+                    <td>
+                      <?php echo $no++; ?>
+                    </td>
+                    <td>
+                    <?php echo $casis->no_casis; ?>
+                    </td>
+                    <td>
+                    <?php echo $casis->nama; ?>
+                    </td>
+                    <td><?php echo $casis->tempat_lahir; ?></td>
+                    <td><?php echo $casis->tanggal_lahir; ?></td>
+                    <td><?php echo $casis->j_kel; ?></td>
+                    <td><?php echo $casis->program; ?></td>
+                    <td> <?php echo $casis->ipk; ?></td>
+                    <td> <?php echo $casis->universitas; ?></td>
+                    <td> <?php echo $casis->panda; ?></td>
+                    <td> <?php echo $casis->kelas; ?></td>
+                    <td> 
+                    <?php
+                                    $img = base_url("uploads/default.png");
+                                    if($casis->foto != ""){
+                                        $img = $this->config->item('base_url').'uploads/foto_casis/'.$casis->foto; 
+                                    }  
+                                ?>
+                                <img src="<?php echo $img; ?>" class="img-circle" style="height: 50px; width: 50px;"></td>
+                    <td>
+                      <a href="<?php echo site_url("casis/edit_casis/".$casis->id); ?>">
+                                      <i class="fa fa-pencil"></i></a>
+                                       <span></span>   
+                                      <a href="<?php echo site_url("casis/delete_casis/".$casis->id); ?>" onclick="return confirm('are you sure to delete?')" class=""> 
+                                      <i class="fa fa-trash"></i></a>
+                    </td>
                   </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
-                  </tr>
+                 <?php } ?>
               </tbody>
             </table>
           </div><!-- table-wrapper -->

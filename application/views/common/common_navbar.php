@@ -25,7 +25,7 @@
                     <div class="col">
                       <ul>
                         <li><a href="<?php echo site_url("casis/add_casis"); ?>">Tambah Calon Siswa</a></li>
-                        <li><a href="<?php echo site_url("casis/index"); ?>">Data Calon Siswa</a></li>
+                        <li><a href="<?php echo site_url("casis"); ?>">Data Calon Siswa</a></li>
                         <li><a href="#">Upload Calon Siswa</a></li>
                       </ul>
                     </div><!-- col -->
