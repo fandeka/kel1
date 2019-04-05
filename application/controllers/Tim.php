@@ -20,7 +20,16 @@ class Tim extends CI_Controller {
             
         }
     }
+    public function delete_tim($id){
+        $data = array();
+            $this->load->model("tim_model");
+            $tim  = $this->tim_model->get_tim_filter_by_flag_del($id);
 
+           if($tim){
+                $this->db->query("update tim set flag_del = 0 where id = '".$id."'");
+                redirect("tim");
+           }
+    }
     public function add_tim(){
         if(_is_user_login($this)){
             $data['status_tim'] = 'active';
@@ -107,6 +116,19 @@ class Tim extends CI_Controller {
             $this->load->view("tim/add_tim",$data);
         }
     }
-    
+
+
+    function tim_rinci($id){
+
+        if(_is_user_login($this)){
+                $data['status_tim'] = 'active';
+
+                $data = array();
+                $this->load->model("tim_model");
+                $data['tim_rinci']  = $this->tim_model->get_tim_rinci_filter_by_flag_del($id);
+
+                $this->load->view("tim/tim_rinci",$data);
+        }
+    }
   
 }

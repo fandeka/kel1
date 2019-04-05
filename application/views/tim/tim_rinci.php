@@ -21,15 +21,15 @@
         <div class="slim-pageheader">
           <ol class="breadcrumb slim-breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Calon Siswa</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Tambah Calon Siswa</li>
+            <li class="breadcrumb-item"><a href="#">Tim Rikkes</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Rincian Tim Rikkes</li>
           </ol>
-          <h6 class="slim-pagetitle">Tambah Calon Siswa</h6>
+          <h6 class="slim-pagetitle">Rincian Tim Rikkes</h6>
         </div><!-- slim-pageheader -->
 
         <div class="section-wrapper mg-t-20">
-          <label class="section-title">Tambah Data Casis</label>
-          <p class="mg-b-20 mg-sm-b-40">Masukkan Data Casis Sesuai Dengan Form</p>
+          <label class="section-title">Bordered Form Group Wrapper</label>
+          <p class="mg-b-20 mg-sm-b-40">A bordered form group wrapper with a label on top of each form control.</p>
 
 
             <?php if(isset($msg)): ?>
@@ -61,92 +61,95 @@
          
                 <div class="row">
                   <div class="col-sm-6 col-md-2">
-                    <img src="<?php echo base_url($this->config->item("theme_admin")."/img/img0.jpg"); ?>" class="img-fluid" alt="" id="foto" >
+                    <?php
+                    $img = base_url("uploads/default.png");
+                    if($tim_rinci->foto != ""){
+                    $img = $this->config->item('base_url').'uploads/foto_tim/'.$tim_rinci->foto; 
+                    }  
+                    ?>
+                    <img src="<?php echo $img; ?>" class="img-circle" style="height: 100px; width: 100px;">
+                    <!-- <img src="<?php echo base_url($this->config->item("theme_admin")."/img/img0.jpg"); ?>" class="img-fluid" alt="" id="foto" > -->
                   </div><!-- col -->                  
-                  <div class="col-sm-6 col-md-3">
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="preview_gambar" name="foto_casis">
-                          <label id="label_foto" class="custom-file-label custom-file-label-primary" for="customFile">Pilih Foto</label>
-                        </div><!-- custom-file -->
-                  </div><!-- col-2 -->
                 </div><!-- row -->
          
 
               <br>
               <br>
-
           <div class="form-layout form-layout-2">
             <div class="row no-gutters">
-              <div class="col-md-6">
+              <div class="col-md-8">
                 <div class="form-group">
-                  <label class="form-control-label">Nama: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="nama" placeholder="" required>
+                  <label class="form-control-label">Nama: </label>
+                  <input class="form-control" type="text" name="nama" placeholder="" value="<?php
+                  echo @$tim_rinci->nama; ?> " disabled>
                 </div>
               </div>
-              <div class="col-md-2">
-                <div class="form-group mg-md-l--1 mg-md-t-0">
-                  <label class="form-control-label">Tempat Lahir: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="tempat_lahir" placeholder="" required>
-                </div>
-              </div><!-- col-8 -->
               <div class="col-md-4 mg-t--1 mg-md-t-0">
                 <div class="form-group mg-md-l--1">
                 
-                    <label class="form-control-label"><i class="icon ion-calendar tx-16 lh-50 op-20"></i> Tanggal Lahir: <span class="tx-danger">*</span></label>
-                    <input id="datepickerNoOfMonths" type="text" class="form-control" placeholder="DD-MM-YYYY" name="tanggal_lahir" required>
+                    <label class="form-control-label"><i class="icon ion-calendar tx-16 lh-50 op-20"></i> Tanggal Lahir: </label>
+                    <input id="datepickerNoOfMonths" type="text" class="form-control" placeholder="DD-MM-YYYY" name="tanggal_lahir" value="<?php
+                  echo @$tim_rinci->tanggal_lahir; ?> " disabled>
                
                 </div>
-              </div>
+              </div><!-- col-4 --><!-- col-4 -->
+              <div class="col-md-4">
+                <div class="form-group bd-t-0-force">
+                  <label class="form-control-label">Pangkat: </label>
+                  <input class="form-control" type="text" name="pangkat" placeholder="" value="<?php
+                  echo @$tim_rinci->pangkat; ?> " disabled>
+                </div>
+              </div><!-- col-4 --><!-- col-4 -->
+              <div class="col-md-4">
+                <div class="form-group mg-md-l--1 bd-t-0-force">
+                  <label class="form-control-label">NRP: </label>
+                  <input class="form-control" type="text" name="nrp" placeholder="" value="<?php
+                  echo @$tim_rinci->nrp; ?> " disabled>
+                </div>
+              </div><!-- col-8 -->
+              <div class="col-md-4">
+                <div class="form-group mg-md-l--1 bd-t-0-force">
+                  <label class="form-control-label">Korps: </label>
+                  <input class="form-control" type="text" name="korps" placeholder="" value="<?php
+                  echo @$tim_rinci->korps; ?> " disabled>
+                </div>
+              </div><!-- col-8 -->
+              <div class="col-md-4">
+                <div class="form-group bd-t-0-force">
+                  <label class="form-control-label">Jabatan: </label>
+                  <input class="form-control" type="text" name="jabatan" placeholder="" value="<?php
+                  echo @$tim_rinci->jabatan; ?> " disabled>
+                </div>
+              </div><!-- col-8 -->
+              <div class="col-md-4">
+                <div class="form-group mg-md-l--1 bd-t-0-force">
+                  <label class="form-control-label">Kesatuan: </label>
+                  <input class="form-control" type="text" name="kesatuan" placeholder="" value="<?php
+                  echo @$tim_rinci->kesatuan; ?> " disabled>
+                </div>
+              </div><!-- col-8 -->
+              <div class="col-md-4">
+                <div class="form-group mg-md-l--1 bd-t-0-force">
+                  <label class="form-control-label">Matra: </label>
+                  <input class="form-control" type="text" name="matra" placeholder="" value="<?php
+                  echo @$tim_rinci->matra; ?> " disabled>
+                </div>
+              </div><!-- col-8 -->
               <div class="col-md-8">
                 <div class="form-group bd-t-0-force">
-                  <label class="form-control-label">No Casis: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="no_casis" placeholder="" required>
-                </div>
-              </div><!-- col-4 --><!-- col-4 -->
-              <div class="col-md-4">
-                <div class="form-group mg-md-l--1 bd-t-0-force">
-                  <label class="">Jenis Kelamin: <span class="tx-danger">*</span></label>
-                  <select name="jenis_kelamin" class="form-control select2-show-search" data-placeholder="Pilih Salah Satu">
-                        <option label="Choose one"></option>
-                        <option value="Pria">Pria</option>
-                        <option value="Wanita">Wanita</option>
-                  </select>
-                </div>
-              </div><!-- col-8 -->
-              <div class="col-md-4">
-                <div class="form-group bd-t-0-force">
-                  <label class="form-control-label">Program: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="program" placeholder="" required>
-                </div>
-              </div><!-- col-4 --><!-- col-4 -->
-              <div class="col-md-4">
-                <div class="form-group mg-md-l--1 bd-t-0-force">
-                  <label class="form-control-label">Universitas: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="universitas" placeholder="" required>
+                  <label class="form-control-label">Alamat: </label>
+                  <input class="form-control" type="text" name="alamat" placeholder="" value="<?php
+                  echo @$tim_rinci->alamat; ?> " disabled>
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
-                  <label class="form-control-label">IPK : <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="ipk" placeholder="" required>
-                </div>
-              </div><!-- col-8 -->
-              <div class="col-md-6">
-                <div class="form-group bd-t-0-force">
-                  <label class="form-control-label">Panda: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="panda" placeholder="" required>
-                </div>
-              </div><!-- col-8 -->
-              <div class="col-md-6">
-                <div class="form-group mg-md-l--1 bd-t-0-force">
-                  <label class="form-control-label">Kelas: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="kelas" placeholder="" required>
+                 <label class="form-control-label">Email: </label>
+                  <input class="form-control" type="text" name="email" placeholder="" value="<?php
+                  echo @$tim_rinci->email; ?> " disabled>
                 </div>
               </div><!-- col-8 -->
             </div><!-- row -->
-            <div class="form-layout-footer bd pd-20 bd-t-0">
-              <button class="btn btn-primary bd-0" type="submit" name="submit">Simpan</button>
-            </div><!-- form-group -->
           </div><!-- form-layout -->
           </form>
         </div><!-- section-wrapper -->
