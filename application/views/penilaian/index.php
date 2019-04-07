@@ -76,7 +76,16 @@
                     <td>8</td>
                     <td>9</td>
 
-                    <td><a href="<?php echo site_url("penilaian/add_nilai"); ?>" class="btn btn-primary btn-icon rounded-circle"><div><i class="icon ion-plus-circled"></i></div></a></td>
+                    <td>
+
+                      <a href="<?php echo site_url("penilaian/lihat_nilai"); ?>" class="btn btn-teal btn-icon rounded-circle" data-toggle="tooltip-teal" data-placement="left" title="" data-original-title="Hasil Penilaian"><div><i class="icon ion-pie-graph"></i></div></a>
+                      &nbsp;&nbsp;
+                      <a href="<?php echo site_url("penilaian/add_nilai"); ?>" class="btn btn-primary btn-icon rounded-circle" data-toggle="tooltip-primary" data-placement="right" title="" data-original-title="Beri Penilaian"><div><i class="icon ion-calculator"></i></div></a>
+
+                    </td>
+
+
+
                   </tr>
               </tbody>
             </table>
@@ -113,6 +122,17 @@
 
 
         $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+
+                // Initialize tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // colored tooltip
+        $('[data-toggle="tooltip-primary"]').tooltip({
+          template: '<div class="tooltip tooltip-primary" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+        $('[data-toggle="tooltip-teal"]').tooltip({
+          template: '<div class="tooltip tooltip-teal" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+        });
 
       });
     </script>

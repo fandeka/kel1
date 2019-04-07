@@ -44,6 +44,19 @@ class Penilaian extends CI_Controller {
         }
 
     }
+
+    function cek_imt($id){
+        if(_is_user_login($this)){
+            if($_POST){
+
+                    var_dump($id); exit();
+            }
+
+        }
+
+    }
+
+
   
 
 
