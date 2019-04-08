@@ -10,5 +10,11 @@ class Tim_model extends CI_Model{
         return $q->result();
     }
 
+
+    function get_tim_rinci_filter_by_flag_del($id){
+        $q = $this->db->query("select * from tim where flag_del = 1 and id = '".$id."'");
+        return $q->row();
+    }
+
 }
 ?>
