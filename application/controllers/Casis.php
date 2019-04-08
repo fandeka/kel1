@@ -113,8 +113,8 @@ class Casis extends CI_Controller {
         if(_is_user_login($this)){
             $data = array();
             $this->load->model("casis_model");
-            $data["casis_types"] = $this->casis_model->get_casis_type();
-            $casis = $this->casis_model->get_casis_by_id($user_id);
+            $data["casis"] = $this->casis_model->get_casis_type();
+            $casis = $this->casis_model->get_casis_by_id($id);
             $data["casis"] = $casis;
             if($_POST){
                 $this->load->library('form_validation');

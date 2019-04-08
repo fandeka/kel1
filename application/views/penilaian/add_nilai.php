@@ -89,6 +89,10 @@
                 <input id="imt" class="form-control" name="imt" placeholder="IMT" type="text" disabled="true">
               </div><!-- form-group -->
               <div class="form-group wd-xs-300">
+                <label class="form-control-label">U IMT:</label>
+                <input id="imt" class="form-control" name="imt" placeholder="IMT" type="text" disabled="true">
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
                 <label class="form-control-label">Keterangan IMT:</label>
                 <textarea rows="3" class="form-control" placeholder="" name="ket_imt"></textarea>
               </div><!-- form-group -->
@@ -106,6 +110,14 @@
                 <input id="nadi" class="form-control" name="nadi" placeholder="Masukkan Nadi" type="text" required>
               </div><!-- form-group -->
               <div class="form-group wd-xs-300">
+                <label class="form-control-label">U Nadi: <span class="tx-danger">*</span></label>
+                <input id="u_nadi" class="form-control" name="u_nadi" placeholder="Masukkan Umum Nadi" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Nadi: <span class="tx-danger">*</span></label>
+                <input id="nb_nadi" class="form-control" name="nb_nadi" placeholder="Masukkan Stakes Nadi" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
                 <label class="form-control-label">Keterangan Nadi:</label>
                 <textarea rows="3" class="form-control" placeholder="" name="ket_nadi"></textarea>
               </div><!-- form-group -->
@@ -117,40 +129,144 @@
             <section>
               <p>The next and previous buttons help you to navigate through your content.</p>
               <div class="form-group wd-xs-300">
-                <label class="form-control-label">Interne: <span class="tx-danger">*</span></label>
-                <input id="interne" class="form-control" name="interne" placeholder="Masukkan Interne" type="text" required>
+                <label class="form-control-label">U Interne: <span class="tx-danger">*</span></label>
+                <input id="u_interne" class="form-control" name="u_interne" placeholder="Masukkan Umum Interne" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Interne: <span class="tx-danger">*</span></label>
+                <input id="nb_interne" class="form-control" name="nb_interne" placeholder="Masukkan stakes Interne" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan Interne: <span class="tx-danger">*</span></label>
+                <input id="ket_interne" class="form-control" name="ket_interne" placeholder="Masukkan Keterangan Interne" type="text" required>
               </div><!-- form-group -->
             </section>
-            <h3>Penilaian 4</h3>
+            <h3>EKG</h3>
             <section>
               <p>The next and previous buttons help you to navigate through your content.</p>
               <div class="form-group wd-xs-300">
-                <label class="form-control-label">Interne: <span class="tx-danger">*</span></label>
-                <input id="interne" class="form-control" name="interne" placeholder="Masukkan Interne" type="text" required>
+                <label class="form-control-label">U EKG: <span class="tx-danger">*</span></label>
+                <input id="u_ekg" class="form-control" name="u_ekg" placeholder="Masukkan Umum EKG" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes EKG: <span class="tx-danger">*</span></label>
+                <input id="nb_ekg" class="form-control" name="nb_ekg" placeholder="Masukkan stakes EKG" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan EKG: <span class="tx-danger">*</span></label>
+                <input id="ket_ekg" class="form-control" name="ket_kg" placeholder="Masukkan Keterangan EKG" type="text" required>
               </div><!-- form-group -->
             </section>
-            <h3>Penilaian 5</h3>
+            <h3>Ergo</h3>
             <section>
               <p>The next and previous buttons help you to navigate through your content.</p>
               <div class="form-group wd-xs-300">
-                <label class="form-control-label">Interne: <span class="tx-danger">*</span></label>
-                <input id="interne" class="form-control" name="interne" placeholder="Masukkan Interne" type="text" required>
+                <label class="form-control-label">U Ergo: <span class="tx-danger">*</span></label>
+                <input id="u_ergo" class="form-control" name="u_ergo" placeholder="Masukkan Umum Ergo" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Ergo: <span class="tx-danger">*</span></label>
+                <input id="nb_ergo" class="form-control" name="nb_ergo" placeholder="Masukkan Stakes Ergo" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan Ergo: <span class="tx-danger">*</span></label>
+                <input id="ket_ergo" class="form-control" name="ket_ergo" placeholder="Masukkan Keterangan Ergo" type="text" required>
               </div><!-- form-group -->
             </section>
-            <h3>Penilaian 6</h3>
+            <h3>Spiro</h3>
             <section>
               <p>The next and previous buttons help you to navigate through your content.</p>
               <div class="form-group wd-xs-300">
-                <label class="form-control-label">Interne: <span class="tx-danger">*</span></label>
-                <input id="interne" class="form-control" name="interne" placeholder="Masukkan Interne" type="text" required>
+                <label class="form-control-label">U Spiro: <span class="tx-danger">*</span></label>
+                <input id="u_spiro" class="form-control" name="u_spiro" placeholder="Masukkan Umum Spiro" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Spiro: <span class="tx-danger">*</span></label>
+                <input id="nb_spiro" class="form-control" name="nb_spiro" placeholder="Masukkan Umum Spiro" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan Spiro: <span class="tx-danger">*</span></label>
+                <input id="ket_spiro" class="form-control" name="ket_spiro" placeholder="Masukkan Keterangan Spiro" type="text" required>
               </div><!-- form-group -->
             </section>
-            <h3>Penilaian 7</h3>
+            <h3>Kulit</h3>
             <section>
               <p>The next and previous buttons help you to navigate through your content.</p>
               <div class="form-group wd-xs-300">
-                <label class="form-control-label">Interne: <span class="tx-danger">*</span></label>
-                <input id="interne" class="form-control" name="interne" placeholder="Masukkan Interne" type="text" required>
+                <label class="form-control-label">U Kulit: <span class="tx-danger">*</span></label>
+                <input id="u_kulit" class="form-control" name="u_kulit" placeholder="Masukkan Umum Kulit" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Kulit: <span class="tx-danger">*</span></label>
+                <input id="nb_kulit" class="form-control" name="nb_kulit" placeholder="Masukkan Stakes Kulit" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan Kulit: <span class="tx-danger">*</span></label>
+                <input id="ket_kulit" class="form-control" name="ket_kulit" placeholder="Masukkan Keterangan Kulit" type="text" required>
+              </div><!-- form-group -->
+            </section>
+            <h3>Rontgen</h3>
+            <section>
+              <p>The next and previous buttons help you to navigate through your content.</p>
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">U Rontgen: <span class="tx-danger">*</span></label>
+                <input id="u_rontgen" class="form-control" name="u_rontgen" placeholder="Masukkan Umum Rontgen" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Rontgen: <span class="tx-danger">*</span></label>
+                <input id="nb_rontgen" class="form-control" name="nb_rontgen" placeholder="Masukkan Stakes Rontgen" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan Rontgen: <span class="tx-danger">*</span></label>
+                <input id="ket_rontgen" class="form-control" name="ket_rontgen" placeholder="Masukkan Keterangan Rontgen" type="text" required>
+              </div><!-- form-group -->
+            </section>            
+            <h3>Laboratorium</h3>
+            <section>
+              <p>The next and previous buttons help you to navigate through your content.</p>
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">U LAB: <span class="tx-danger">*</span></label>
+                <input id="u_lab" class="form-control" name="u_lab" placeholder="Masukkan Umum LAB" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes LAB: <span class="tx-danger">*</span></label>
+                <input id="nb_lab" class="form-control" name="nb_lab" placeholder="Masukkan Stakes LAB" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan LAB: <span class="tx-danger">*</span></label>
+                <input id="ket_lab" class="form-control" name="ket_lab" placeholder="Masukkan Keterangan LAB" type="text" required>
+              </div><!-- form-group -->
+            </section>
+            <h3>Bedah</h3>
+            <section>
+              <p>The next and previous buttons help you to navigate through your content.</p>
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">U Bedah: <span class="tx-danger">*</span></label>
+                <input id="u_bedah" class="form-control" name="u_bedah" placeholder="Masukkan Umum Bedah" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Bedah: <span class="tx-danger">*</span></label>
+                <input id="nb_bedah" class="form-control" name="nb_bedah" placeholder="Masukkan Stakes Bedah" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan Bedah: <span class="tx-danger">*</span></label>
+                <input id="ket_bedah" class="form-control" name="ket_bedah" placeholder="Masukkan Keterangan Bedah" type="text" required>
+              </div><!-- form-group -->
+            </section>
+            <h3>Atas</h3>
+            <section>
+              <p>The next and previous buttons help you to navigate through your content.</p>
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">U Atas: <span class="tx-danger">*</span></label>
+                <input id="a_atas" class="form-control" name="a_atas" placeholder="Masukkan Atas" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Atas: <span class="tx-danger">*</span></label>
+                <input id="nb_atas" class="form-control" name="nb_atas" placeholder="Masukkan Stakes Atas" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan Atas: <span class="tx-danger">*</span></label>
+                <input id="ket_atas" class="form-control" name="ket_atas" placeholder="Masukkan Keterangan Atas" type="text" required>
               </div><!-- form-group -->
             </section>
           </div>
@@ -220,7 +336,41 @@
               if(currentIndex === 5) { return true; 
 
               }
+              
               if(currentIndex === 6) { return true; 
+
+              }
+              if(currentIndex === 7) { return true; 
+
+              }
+              if(currentIndex === 8) { return true; 
+
+              }
+              if(currentIndex === 9) { return true; 
+
+              }
+              if(currentIndex === 10) { return true; 
+
+              }
+              if(currentIndex === 11) { return true; 
+
+              }
+              if(currentIndex === 12) { return true; 
+
+              }
+              if(currentIndex === 13) { return true; 
+
+              }
+              if(currentIndex === 14) { return true; 
+
+              }
+              if(currentIndex === 15) { return true; 
+
+              }
+              if(currentIndex === 16) { return true; 
+
+              }
+              if(currentIndex === 17) { return true; 
 
               }
             // Always allow step back to the previous step even if the current step is not valid.

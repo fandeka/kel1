@@ -17,7 +17,7 @@ public function get_casis_by_id($id){
 
 
  public function get_casis_type(){
-        $q = $this->db->query("select * from casis_types");
+        $q = $this->db->query("select * from casis");
         return $q->result();
     }
 
