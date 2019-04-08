@@ -50,6 +50,7 @@
                 <tr>
                     <th class="wd-7p">No</th>
                     <th class="">NoCasis</th>
+                    <th class="">Foto</th>
                     <th class="">Nama</th>
                     <th class="">Tempat Lahir</th>
                     <th class="">Tanggal Lahir</th>
@@ -59,7 +60,7 @@
                     <th class="">Universitas</th>
                     <th class="">Panda</th>
                     <th class="">Kelas</th>
-                    <th class="">Foto</th>
+                    
                     <th class="wd-7p">AKSI</th>
                 </tr>
               </thead>
@@ -73,6 +74,15 @@
                     <td>
                     <?php echo $casis->no_casis; ?>
                     </td>
+                   <td> 
+                    <?php
+                                    $img = base_url("uploads/default.png");
+                                    if($casis->foto != ""){
+                                        $img = $this->config->item('base_url').'uploads/foto_casis/'.$casis->foto; 
+                                    }  
+                                ?>
+                                <img src="<?php echo $img; ?>" class="img-circle" style="height: 50px; width: 50px;">
+                              </td>
                     <td>
                     <?php echo $casis->nama; ?>
                     </td>
@@ -84,15 +94,8 @@
                     <td> <?php echo $casis->universitas; ?></td>
                     <td> <?php echo $casis->panda; ?></td>
                     <td> <?php echo $casis->kelas; ?></td>
-                    <td> 
-                    <?php
-                                    $img = base_url("uploads/default.png");
-                                    if($casis->foto != ""){
-                                        $img = $this->config->item('base_url').'uploads/foto_casis/'.$casis->foto; 
-                                    }  
-                                ?>
-                                <img src="<?php echo $img; ?>" class="img-circle" style="height: 50px; width: 50px;"></td>
-                    <td>
+                    
+                     <td>
                       <a href="<?php echo site_url("casis/edit_casis/".$casis->id); ?>">
                                       <i class="fa fa-pencil"></i></a>
                                        <span></span>   
