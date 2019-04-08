@@ -21,20 +21,42 @@ class Penilaian extends CI_Controller {
         }
     }
     
-public function add_penilaian(){
-        if(_is_user_login($this)){
-            $data['status_penilaian'] = 'active';
-            $this->load->view("penilaian/add_nilai",$data);
+    function add_penilaian(){
+            if(_is_user_login($this)){
+                $data['status_penilaian'] = 'active';
+                $this->load->view("penilaian/add_penilaian",$data);
+            }
         }
-    }
-public function add_nilai(){
-        if(_is_user_login($this)){
-            $data['status_penilaian'] = 'active';
-            $this->load->view("penilaian/add_nilai",$data);
+    function add_nilai(){
+            if(_is_user_login($this)){
+                $data['status_penilaian'] = 'active';
+                $this->load->view("penilaian/add_nilai",$data);
+            }
         }
+        
+    function hitung_nilai($id){
+        if(_is_user_login($this)){
+            if($_POST){
+
+                    var_dump($id); exit();
+            }
+
+        }
+
     }
-    
-  
+
+    function cek_imt($id){
+        if(_is_user_login($this)){
+            if($_POST){
+
+                    var_dump($id); exit();
+            }
+
+        }
+
+    }
+
+
   
 
 
