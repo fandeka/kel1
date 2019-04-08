@@ -31,8 +31,8 @@
 
         <div class="section-wrapper">
 
-          <label class="section-title">Basic Responsive DataTable</label>
-          <p class="mg-b-20 mg-sm-b-40">Searching, ordering and paging goodness will be immediately added to the table, as shown in this example.</p>
+          <label class="section-title">Daftar Nama Tim</label>
+          <p class="mg-b-20 mg-sm-b-40"><!-- rching, ordering and paging goodness will be immediately added to the table, as shown in this exampleSea. --></p>
           <div class="row">
             <div class="col-md-6 col-lg-4">
               <div class="demo-btn-list">
