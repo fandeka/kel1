@@ -12,8 +12,9 @@ class Casis extends CI_Controller {
 	public function index()
 	{ 
 		if(_is_user_login($this)){
-            $data['status_casis'] = 'active';
+            
             $data = array();
+            $data['status_casis'] = 'active';
             $this->load->model("casis_model");
             $data["casis_rikes"] = $this->casis_model->get_casis_filter_by_flag_del();
             $this->load->view("casis/index",$data);
@@ -112,6 +113,7 @@ class Casis extends CI_Controller {
  public function edit_casis($casis_id){
         if(_is_user_login($this)){
             $data = array();
+            $data['status_casis'] = 'active';
             $this->load->model("casis_model");
             $data["casis"] = $this->casis_model->get_casis_type();
             $casis = $this->casis_model->get_casis_by_id($id);
@@ -206,6 +208,20 @@ public function delete_casis($id){
                 $this->db->query("update casis set flag_del = 0 where id = '".$id."'");
                 redirect("casis");
            }
+    }
+
+    function casis_rinci($id){
+
+        if(_is_user_login($this)){
+                
+
+                $data = array();
+                $data['status_casis'] = 'active';
+                $this->load->model("casis_model");
+                $data['casis_rinci']  = $this->casis_model->get_casis_rinci_filter_by_flag_del($id);
+
+                $this->load->view("casis/casis_rinci",$data);
+        }
     }
   
 }

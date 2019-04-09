@@ -21,6 +21,9 @@ public function get_casis_by_id($id){
         return $q->result();
     }
 
-
+    function get_casis_rinci_filter_by_flag_del($id){
+        $q = $this->db->query("select * from casis where flag_del = 1 and id = '".$id."'");
+        return $q->row();
+    }
 }
 ?>
