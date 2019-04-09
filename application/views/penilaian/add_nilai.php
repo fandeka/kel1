@@ -237,6 +237,7 @@
                 <input id="ket_lab" class="form-control" name="ket_lab" placeholder="Masukkan Keterangan LAB" type="text" required>
               </div><!-- form-group -->
             </section>
+          <div id="wizard2">
             <h3>Bedah</h3>
             <section>
               <p>The next and previous buttons help you to navigate through your content.</p>
@@ -257,7 +258,7 @@
             <section>
               <p>The next and previous buttons help you to navigate through your content.</p>
               <div class="form-group wd-xs-300">
-                <label class="form-control-label">U Atas: <span class="tx-danger">*</span></label>
+                <label class="form-control-label">A Atas: <span class="tx-danger">*</span></label>
                 <input id="a_atas" class="form-control" name="a_atas" placeholder="Masukkan Atas" type="text" required>
               </div><!-- form-group -->
               <div class="form-group wd-xs-300">
@@ -269,7 +270,88 @@
                 <input id="ket_atas" class="form-control" name="ket_atas" placeholder="Masukkan Keterangan Atas" type="text" required>
               </div><!-- form-group -->
             </section>
+            <h3>Bawah</h3>
+            <section>
+              <p>The next and previous buttons help you to navigate through your content.</p>
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">B Bawah: <span class="tx-danger">*</span></label>
+                <input id="b_bawah" class="form-control" name="b_bawah" placeholder="Masukkan Bawah" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Bawah: <span class="tx-danger">*</span></label>
+                <input id="nb_bawah" class="form-control" name="nb_bawah" placeholder="Masukkan Stakes Bawah" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan Bawah: <span class="tx-danger">*</span></label>
+                <input id="ket_bawah" class="form-control" name="ket_bawah" placeholder="Masukkan Keterangan Bawah" type="text" required>
+              </div><!-- form-group -->
+            </section>
+            <h3>THT</h3>
+            <section>
+              <p>The next and previous buttons help you to navigate through your content.</p>
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">T THT: <span class="tx-danger">*</span></label>
+                <input id="t_tht" class="form-control" name="t_tht" placeholder="Masukkan THT" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes THT: <span class="tx-danger">*</span></label>
+                <input id="nb_tht" class="form-control" name="nb_tht" placeholder="Masukkan Stakes THT" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan THT: <span class="tx-danger">*</span></label>
+                <input id="ket_tht" class="form-control" name="ket_tht" placeholder="Masukkan Keterangan THT" type="text" required>
+              </div><!-- form-group -->
+            </section>
+            <h3>Mata</h3>
+            <section>
+              <p>The next and previous buttons help you to navigate through your content.</p>
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">L Mata: <span class="tx-danger">*</span></label>
+                <input id="l_mata" class="form-control" name="l_mata" placeholder="Masukkan Mata" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Mata: <span class="tx-danger">*</span></label>
+                <input id="nb_mata" class="form-control" name="nb_mata" placeholder="Masukkan Stakes Mata" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan Mata: <span class="tx-danger">*</span></label>
+                <input id="ket_mata" class="form-control" name="ket_mata" placeholder="Masukkan Keterangan THT" type="text" required>
+              </div><!-- form-group -->
+            </section>
+            <h3>Gigi</h3>
+            <section>
+              <p>The next and previous buttons help you to navigate through your content.</p>
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">G Gigi: <span class="tx-danger">*</span></label>
+                <input id="g_gigi" class="form-control" name="g_gigi" placeholder="Masukkan Gigi" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Gigi: <span class="tx-danger">*</span></label>
+                <input id="nb_gigi" class="form-control" name="nb_gigi" placeholder="Masukkan Stakes Mata" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan Gigi: <span class="tx-danger">*</span></label>
+                <input id="ket_gigi" class="form-control" name="ket_gigi" placeholder="Masukkan Keterangan Gigi" type="text" required>
+              </div><!-- form-group -->
+            </section>
+            <h3>Jiwa</h3>
+            <section>
+              <p>The next and previous buttons help you to navigate through your content.</p>
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">J Jiwa: <span class="tx-danger">*</span></label>
+                <input id="j_jiwa" class="form-control" name="j_jiwa" placeholder="Masukkan Jiwa" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Stakes Jiwa: <span class="tx-danger">*</span></label>
+                <input id="nb_jiwa" class="form-control" name="nb_jiwa" placeholder="Masukkan Stakes Jiwa" type="text" required>
+              </div><!-- form-group -->
+              <div class="form-group wd-xs-300">
+                <label class="form-control-label">Keterangan Jiwa: <span class="tx-danger">*</span></label>
+                <input id="ket_jiwa" class="form-control" name="ket_jiwa" placeholder="Masukkan Keterangan Jiwa" type="text" required>
+              </div><!-- form-group -->
+            </section>
           </div>
+        </div>
         </div><!-- section-wrapper -->
 
       </div><!-- container -->

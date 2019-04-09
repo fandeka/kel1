@@ -197,6 +197,15 @@ class Casis extends CI_Controller {
         }
     }
  
+public function delete_casis($id){
+        $data = array();
+            $this->load->model("casis_model");
+            $casis  = $this->casis_model->get_casis_filter_by_flag_del($id);
 
+           if($casis){
+                $this->db->query("update casis set flag_del = 0 where id = '".$id."'");
+                redirect("casis");
+           }
+    }
   
 }

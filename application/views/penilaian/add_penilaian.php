@@ -87,152 +87,152 @@
               <div class="col-md-4">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">Tinggi Badan: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="pangkat" placeholder="">
+                  <input class="form-control" type="text" name="tb" placeholder="">
                 </div>
               </div><!-- col-4 --><!-- col-4 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Berat Badan: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="nrp" placeholder="">
+                  <input class="form-control" type="text" name="bb" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">IMT: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="korps" placeholder="">
+                  <input class="form-control" type="text" name="imt" placeholder="">
                 </div>
               </div><!-- col-8 -->
 
               <div class="col-md-4">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">Keteterangan IMT: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="pangkat" placeholder="">
+                  <input class="form-control" type="text" name="ket_imt" placeholder="">
                 </div>
               </div><!-- col-4 --><!-- col-4 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Tensi: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="nrp" placeholder="">
+                  <input class="form-control" type="text" name="tensi" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Nadi: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="korps" placeholder="">
+                  <input class="form-control" type="text" name="nadi" placeholder="">
                 </div>
               </div><!-- col-8 -->
 
               <div class="col-md-4">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">U_Nadi: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="pangkat" placeholder="">
+                  <input class="form-control" type="text" name="u_nadi" placeholder="">
                 </div>
               </div><!-- col-4 --><!-- col-4 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Stakes Nadi: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="nrp" placeholder="">
+                  <input class="form-control" type="text" name="nb_nadi" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Keterangan Nadi: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="korps" placeholder="">
+                  <input class="form-control" type="text" name="ket_nadi" placeholder="">
                 </div>
               </div><!-- col-8 -->
 
               <div class="col-md-4">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">U_Interne: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="jabatan" placeholder="">
+                  <input class="form-control" type="text" name="u_interne" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Stakes Interne: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="kesatuan" placeholder="">
+                  <input class="form-control" type="text" name="nb_interne" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Keterangan Interne: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="matra" placeholder="">
+                  <input class="form-control" type="text" name="ket_interne" placeholder="">
                 </div>
               </div><!-- col-8 -->
 
               <div class="col-md-4">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">U_EKG: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="jabatan" placeholder="">
+                  <input class="form-control" type="text" name="u_ekg" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Stakes EKG: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="kesatuan" placeholder="">
+                  <input class="form-control" type="text" name="nb_ekg" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Keterangan EKG: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="matra" placeholder="">
+                  <input class="form-control" type="text" name="ket_ekg" placeholder="">
                 </div>
               </div><!-- col-8 -->
 
               <div class="col-md-4">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">U_Spiro: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="jabatan" placeholder="">
+                  <input class="form-control" type="text" name="u_spiro" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Stakes Spiro: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="kesatuan" placeholder="">
+                  <input class="form-control" type="text" name="nb_spiro" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Keterangan Spiro: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="matra" placeholder="">
+                  <input class="form-control" type="text" name="ket_spiro" placeholder="">
                 </div>
               </div><!-- col-8 -->
 
               <div class="col-md-4">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">U_Kulit: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="jabatan" placeholder="">
+                  <input class="form-control" type="text" name="u_kulit" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Stakes Kulit: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="kesatuan" placeholder="">
+                  <input class="form-control" type="text" name="nb_kulit" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Keterangan Kulit: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="matra" placeholder="">
+                  <input class="form-control" type="text" name="ket_kulit" placeholder="">
                 </div>
               </div><!-- col-8 -->
 
               <div class="col-md-4">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">U_Rontgen: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="jabatan" placeholder="">
+                  <input class="form-control" type="text" name="u_rontgen" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Stakes Rontgen: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="kesatuan" placeholder="">
+                  <input class="form-control" type="text" name="nb_rontgen" placeholder="">
                 </div>
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Keterangan Rontgen: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="matra" placeholder="">
+                  <input class="form-control" type="text" name="ket_rontgen" placeholder="">
                 </div>
               </div><!-- col-8 -->
 
