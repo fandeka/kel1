@@ -79,19 +79,19 @@ $(function(){
     
     if(val === 'rtl') {
       if(!isRtl) {
-        if(path[3]) {
-          newloc = '/slim/'+path[2]+'-rtl/'+path[3];
+        if(path[2]) {
+          newloc = '/slim/'+path[1]+'-rtl/'+path[2];
         } else {
-          newloc = '/slim/'+path[2]+'-rtl/';
+          newloc = '/slim/'+path[1]+'-rtl/';
         }
         $(location).attr('href', newloc);
       }
     } else {
       if(isRtl) {
-        if(path[3]) {
-          newloc = '/slim/'+path[2].replace('-rtl','')+'/'+path[3];
+        if(path[2]) {
+          newloc = '/slim/'+path[1].replace('-rtl','')+'/'+path[2];
         } else {
-          newloc = '/slim/'+path[2].replace('-rtl','')+'/';
+          newloc = '/slim/'+path[1].replace('-rtl','')+'/';
         }
         $(location).attr('href', newloc);
       }
