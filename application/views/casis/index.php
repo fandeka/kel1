@@ -48,20 +48,13 @@
             <table id="datatable1" class="table display responsive nowrap">
               <thead>
                 <tr>
-                    <th class="wd-7p">No</th>
-                    <th class="">NoCasis</th>
-                    <th class="">Foto</th>
-                    <th class="">Nama</th>
-                    <th class="">Tempat Lahir</th>
-                    <th class="">Tanggal Lahir</th>
-                    <th class="">j. Kelamin</th>
-                    <th class="">Program</th>
-                    <th class="">IPk</th>
-                    <th class="">Universitas</th>
-                    <th class="">Panda</th>
-                    <th class="">Kelas</th>
-                    
-                    <th class="wd-7p">AKSI</th>
+                    <th class="wd-5p">No</th>
+                    <th class="wd-5p">NoCasis</th>
+                    <th class="wd-5p">Foto</th>
+                    <th class="wd-5p">Nama</th>
+                    <th class="wd-5p">TTL</th>
+                    <th class="wd-5p">J. Kelamin</th>                    
+                    <th class="wd-5p">#</th>
                 </tr>
               </thead>
               <tbody>
@@ -86,19 +79,12 @@
                     <td>
                     <?php echo $casis->nama; ?>
                     </td>
-                    <td><?php echo $casis->tempat_lahir; ?></td>
-                    <td><?php echo $casis->tanggal_lahir; ?></td>
+                    <td><?php echo $casis->tempat_lahir; ?>, <?php echo $casis->tanggal_lahir; ?></td>
                     <td><?php echo $casis->j_kel; ?></td>
-                    <td><?php echo $casis->program; ?></td>
-                    <td> <?php echo $casis->ipk; ?></td>
-                    <td> <?php echo $casis->universitas; ?></td>
-                    <td> <?php echo $casis->panda; ?></td>
-                    <td> <?php echo $casis->kelas; ?></td>
-                    
                      <td>
                       <a href="<?php echo site_url("casis/edit_casis/".$casis->id); ?>">
                                       <i class="fa fa-pencil"></i></a>
-                                       <span></span>   
+                                       <span></span>   &nbsp&nbsp
                                       <a href="<?php echo site_url("casis/delete_casis/".$casis->id); ?>" onclick="return confirm('are you sure to delete?')" class=""> 
                                       <i class="fa fa-trash"></i></a>
                     </td>
