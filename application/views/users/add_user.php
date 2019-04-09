@@ -28,8 +28,8 @@
         </div><!-- slim-pageheader -->
 
         <div class="section-wrapper mg-t-20">
-          <label class="section-title">Bordered Form Group Wrapper</label>
-          <p class="mg-b-20 mg-sm-b-40">A bordered form group wrapper with a label on top of each form control.</p>
+          <label class="section-title">Tambah Data Pengguna</label>
+          <p class="mg-b-20 mg-sm-b-40">Masukkan Data Pengguna Sesuai Form.</p>
 
 
             <?php if(isset($msg)): ?>

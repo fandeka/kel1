@@ -1,5 +1,5 @@
 <?php
-class casis_model extends CI_Model{
+class Casis_model extends CI_Model{
 
     function get_casis_filter_by_flag_del(){
         $this->db->select();
