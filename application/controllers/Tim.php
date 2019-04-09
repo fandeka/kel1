@@ -12,8 +12,9 @@ class Tim extends CI_Controller {
 	public function index()
 	{ 
 		if(_is_user_login($this)){
-            $data['status_tim'] = 'active';
+            
             $data = array();
+            $data['status_tim'] = 'active';
             $this->load->model("tim_model");
             $data["tim_rikkes"] = $this->tim_model->get_tim_filter_by_flag_del();
             $this->load->view("tim/index",$data);
@@ -121,9 +122,10 @@ class Tim extends CI_Controller {
     function tim_rinci($id){
 
         if(_is_user_login($this)){
-                $data['status_tim'] = 'active';
+                
 
                 $data = array();
+                $data['status_tim'] = 'active';
                 $this->load->model("tim_model");
                 $data['tim_rinci']  = $this->tim_model->get_tim_rinci_filter_by_flag_del($id);
 
