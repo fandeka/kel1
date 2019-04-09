@@ -77,7 +77,7 @@
                                 <img src="<?php echo $img; ?>" class="img-circle" style="height: 50px; width: 50px;">
                               </td>
                     <td>
-                    <?php echo $casis->nama; ?>
+                    <?php echo anchor('casis/casis_rinci/'.$casis->id, $casis->nama, 'title="Detail"'); ?>
                     </td>
                     <td><?php echo $casis->tempat_lahir; ?>, <?php echo $casis->tanggal_lahir; ?></td>
                     <td><?php echo $casis->j_kel; ?></td>
