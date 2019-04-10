@@ -74,7 +74,7 @@
                     <td>
                       <a href="<?php echo site_url("penilaian/lihat_nilai"); ?>" class="btn btn-teal btn-icon rounded-circle" data-toggle="tooltip-teal" data-placement="left" title="" data-original-title="Hasil Penilaian"><div><i class="icon ion-pie-graph"></i></div></a>
                       &nbsp;&nbsp;
-                      <a href="<?php echo site_url("penilaian/add_nilai"); ?>" class="btn btn-primary btn-icon rounded-circle" data-toggle="tooltip-primary" data-placement="right" title="" data-original-title="Beri Penilaian"><div><i class="icon ion-calculator"></i></div></a>
+                      <a href="<?php echo site_url("penilaian/add_nilai/".$casis->id); ?>" class="btn btn-primary btn-icon rounded-circle" data-toggle="tooltip-primary" data-placement="right" title="" data-original-title="Beri Penilaian"><div><i class="icon ion-calculator"></i></div></a>
 
                     </td>
 

@@ -38,26 +38,32 @@
 
                 <div class="row">
                   <div class="col-sm-6 col-md-2">
-                    <img src="<?php echo base_url($this->config->item("theme_admin")."/img/img0.jpg"); ?>" class="img-fluid" alt="" id="foto" >
+                    <?php
+                    $img = base_url("uploads/default.png");
+                    if($casis_rinci->foto != ""){
+                    $img = $this->config->item('base_url').'uploads/foto_casis/'.$casis_rinci->foto; 
+                    }  
+                    ?>
+                    <img src="<?php echo $img; ?>" class="img-circle" style="height: 100px; width: 100px;">
+                    <!-- <img src="<?php echo base_url($this->config->item("theme_admin")."/img/img0.jpg"); ?>" class="img-fluid" alt="" id="foto" > -->
                   </div><!-- col -->                  
                 </div><!-- row -->
          
 
               <br>
               <br>
-
           <div class="form-layout form-layout-2">
             <div class="row no-gutters">
               <div class="col-md-8">
                 <div class="form-group">
                   <label class="form-control-label">Nama:</label>
-                  <input class="form-control" type="text" name="nama" placeholder="" required>
+                  <input class="form-control" type="text" name="nama" placeholder="" value="<?php echo $casis_rinci->nama;?>" disabled="true">
                 </div>
               </div>
               <div class="col-md-4 mg-t--1 mg-md-t-0">
                 <div class="form-group mg-md-l--1 mg-md-t-0">
                   <label class="form-control-label">No Casis:</label>
-                  <input id="no_casis" class="form-control" type="text" name="no_casis" placeholder="" required>
+                  <input id="no_casis" class="form-control" type="text" name="no_casis" placeholder="" value="<?php echo $casis_rinci->no_casis;?>" disabled="true">
                 </div>
               </div><!-- col-8 -->
     

@@ -22,9 +22,9 @@
           <ol class="breadcrumb slim-breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Tes Rikkes</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Hasil Tes</li>
+            <!-- <li class="breadcrumb-item active" aria-current="page">Hasil Tes</li> -->
           </ol>
-          <h6 class="slim-pagetitle">Hasil Test</h6>
+          <!-- <h6 class="slim-pagetitle">Hasil Test</h6> -->
         </div><!-- slim-pageheader -->
 
         <div class="section-wrapper mg-t-20">
