@@ -40,44 +40,38 @@
               <thead>
                 <tr>
                     <th class="wd-5p">No</th>
-                    <th class="wd-10p">No Casis</th>
-                    <th class="wd-10p">NAMA</th>
-                    <th class="wd-10p">TTL</th>
-                    <th class="wd-10p">Program</th>
-                    <th class="wd-10p">Universitas</th>
-                    <th class="wd-10p">IPK</th>
-                    <th class="wd-10p">PANDA</th>
-                    <th class="wd-10p">KELAS</th>
-                    <th class="wd-5p">AKSI</th>
+                    <th class="wd-5p">NoCasis</th>
+                    <th class="wd-5p">Foto</th>
+                    <th class="wd-5p">Nama</th>
+                    <th class="wd-5p">TTL</th>
+                    <th class="wd-5p">J. Kelamin</th>                    
+                    <th class="wd-5p">#</th>
                 </tr>
               </thead>
-              <tbody>
+              <?php $no = 1; ?>
+                        <?php foreach($penilaian_rikkes as $casis){?>
                   <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-
-                    <td><a href="<?php echo site_url("penilaian/add_nilai"); ?>" class="btn btn-primary btn-icon rounded-circle"><div><i class="icon ion-plus-circled"></i></div></a></td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-
                     <td>
-
+                      <?php echo $no++; ?>
+                    </td>
+                    <td>
+                    <?php echo $casis->no_casis; ?>
+                    </td>
+                   <td> 
+                    <?php
+                                    $img = base_url("uploads/default.png");
+                                    if($casis->foto != ""){
+                                        $img = $this->config->item('base_url').'uploads/foto_casis/'.$casis->foto; 
+                                    }  
+                                ?>
+                                <img src="<?php echo $img; ?>" class="img-circle" style="height: 50px; width: 50px;">
+                              </td>
+                    <td>
+                    <?php echo anchor('casis/casis_rinci/'.$casis->id, $casis->nama, 'title="Detail"'); ?>
+                    </td>
+                    <td><?php echo $casis->tempat_lahir; ?>, <?php echo $casis->tanggal_lahir; ?></td>
+                    <td><?php echo $casis->j_kel; ?></td>
+                    <td>
                       <a href="<?php echo site_url("penilaian/lihat_nilai"); ?>" class="btn btn-teal btn-icon rounded-circle" data-toggle="tooltip-teal" data-placement="left" title="" data-original-title="Hasil Penilaian"><div><i class="icon ion-pie-graph"></i></div></a>
                       &nbsp;&nbsp;
                       <a href="<?php echo site_url("penilaian/add_nilai"); ?>" class="btn btn-primary btn-icon rounded-circle" data-toggle="tooltip-primary" data-placement="right" title="" data-original-title="Beri Penilaian"><div><i class="icon ion-calculator"></i></div></a>
@@ -87,6 +81,7 @@
 
 
                   </tr>
+                  <?php } ?>
               </tbody>
             </table>
           </div><!-- table-wrapper -->
