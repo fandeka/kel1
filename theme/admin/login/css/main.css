@@ -201,20 +201,23 @@ iframe {
   max-width: 100%;
 }
 
+.login100-picMATRA img {
+  max-width: 10%;
+}
 
 .login100-picTNI img {
-  max-width: 20%;
+  max-width: 30%;
 }
 
 /*------------------------------------------------------------------
 [  ]*/
 .login100-form {
-  width: 290px;
+  width: 400px;
 }
 
 .login100-form-title {
   font-family: Poppins-Bold;
-  font-size: 50px;
+  font-size: 43px;
   color: #f90000;
   line-height: 1.2;
   text-align: center;

@@ -11570,7 +11570,7 @@ textarea.parsley-success:focus {
   height: 75px;
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
   border-bottom: 1px solid #dee2e6; }
   .slim-header .container {
     display: flex;
@@ -11679,7 +11679,7 @@ textarea.parsley-success:focus {
   margin-top: 15px; }
 
 .slim-header-right .dropdown-c.show > a {
-  color: #1b84e7; }
+  color: #f81e05; }
 
 .slim-header-right .dropdown-c .nav {
   flex-direction: column; }
@@ -11753,7 +11753,7 @@ textarea.parsley-success:focus {
     width: 45px;
     height: 45px;
     padding: 3px;
-    border: 1px solid #1b84e7;
+    border: 1px solid #f6130b;
     border-radius: 100%; }
   .logged-user span {
     margin-left: 10px;
@@ -11768,9 +11768,9 @@ textarea.parsley-success:focus {
       .logged-user i {
         display: block; } }
   .logged-user:hover, .logged-user:focus {
-    color: #1b84e7; }
+    color: #f6360e; }
     .logged-user:hover img, .logged-user:focus img {
-      box-shadow: 0 0 10px rgba(27, 132, 231, 0.2); }
+      box-shadow: 0 0 10px rgba(249, 37, 22); }
 
 /************** RTL SUPPORT **************
 /*****************************************/
@@ -12023,7 +12023,7 @@ textarea.parsley-success:focus {
     font-size: 13px;
     letter-spacing: .7px;
     font-weight: 500;
-    color: #656d75;
+    color: #5d170f;
     height: 46px;
     padding: 0;
     display: flex;
@@ -12043,8 +12043,8 @@ textarea.parsley-success:focus {
         font-size: 22px;
         margin-top: -2px; }
     .slim-navbar .nav-link:hover, .slim-navbar .nav-link:focus {
-      color: #343a40;
-      background-color: #f8f9fa; }
+      color: #fbf8f7;
+       background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); }
     .slim-navbar .nav-link.active {
       border-color: #1b84e7; }
     .slim-navbar .nav-link .square-8 {
@@ -12105,8 +12105,8 @@ textarea.parsley-success:focus {
         margin: 0 10px;
         color: #495057; }
         .slim-navbar .sub-item ul a:hover, .slim-navbar .sub-item ul a:focus {
-          color: #1b84e7;
-          background-color: #f2f4f6; }
+          color: #f0360f;
+          background-color:#ed706633; }
     .slim-navbar .sub-item .sub-with-sub {
       position: relative; }
       .slim-navbar .sub-item .sub-with-sub::after {

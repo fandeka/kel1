@@ -31,11 +31,10 @@
                 </div>
                 <form class="login100-form validate-form" method="post" action="#">
                     <span class="login100-form-title">
-                        Rikkes TNI
+                        Urikkes Mabes TNI
+
                         <div class="login100-picTNI js-tilt" data-tilt>
-                    <img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/1200px-Insignia_of_the_Indonesian_Army.svg.png"); ?>" alt="IMG"> 
-                    <img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/laut.png"); ?>" alt="IMG">  
-                    <img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/1200px-Insignia_of_the_Indonesian_Air_Force.svg.png"); ?>" alt="IMG">
+                     <img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/Pmi.png"); ?>" alt="IMG">
                       </div>
     
                     </span>
@@ -63,11 +62,15 @@
                     </div>
 
 
-                    <div class="text-center p-t-12">
+                    <div class="text-center p-t-90">
                         <a class="txt2" href="#">
-                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-
-                            <div class="text-center p-t-100">
+                           
+                    <div class="login100-picMATRA js-tilt" data-tilt>
+                    <img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/sc.png"); ?>" alt="IMG"> 
+                    <img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/laut.png"); ?>" alt="IMG">  
+                    <img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/1200px-Insignia_of_the_Indonesian_Air_Force.svg.png"); ?>" alt="IMG">
+                      </div>
+                            <div class="text-center p-t-3">
                         <a class="txt2" href="#">
                             Tentara Nasional Indonesia
                         </a>
