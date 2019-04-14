@@ -13,6 +13,17 @@
 
     <!-- Slim CSS -->
     <link rel="stylesheet" href="<?php echo base_url($this->config->item("theme_admin")."/css/slim.css"); ?>">
+
+    <style type="text/css">
+      .wizard > .content > .body {
+          float: none;
+          position: static;
+          width: 661px;
+          height: 1057px;
+          padding: 40px;
+      }
+    </style>
+
 </head>
   <body>
     <?php  $this->load->view("common/common_header"); ?>
@@ -89,7 +100,7 @@
                   </div>
                   <br>
                   <div class="form-group wd-xs-300">
-                    <button class="btn btn-primary">Cek IMT</button>
+                    <button class="btn btn-primary" type="submit" name="cek_imt" id="cek_imt">Cek IMT</button>
                   </div><!-- form-group -->
                   <div class="form-group wd-xs-300">
                     <label class="form-control-label">IMT:</label>
@@ -97,13 +108,13 @@
                   </div><!-- form-group -->
                   <div class="form-group wd-xs-300">
                     <label class="form-control-label">U IMT:</label>
-                    <input id="imt" class="form-control" name="imt" placeholder="IMT" type="text" disabled="true">
+                    <input id="u_imt" class="form-control" name="u_imt" placeholder="U_IMT" type="text" disabled="true">
                   </div><!-- form-group -->
                   <div class="form-group wd-xs-300">
                     <label class="form-control-label">Keterangan IMT:</label>
-                    <textarea rows="3" class="form-control" placeholder="" name="ket_imt"></textarea>
+                    <textarea rows="3" class="form-control" placeholder="" name="ket_imt" id="ket_imt"></textarea>
                   </div><!-- form-group -->
-                  <button class="btn btn-primary bd-0" type="submit" name="submit">Simpan</button>
+                  <button class="btn btn-primary bd-0" type="submit" name="submit_imt" id="submit_imt">Simpan</button>
               </section>
               <h3>Tensi</h3>
               <section>
@@ -128,7 +139,6 @@
                   <label class="form-control-label">Keterangan Nadi:</label>
                   <textarea rows="3" class="form-control" placeholder="" name="ket_nadi"></textarea>
                 </div><!-- form-group -->
-              
                 <button class="btn btn-primary bd-0" type="submit" name="submit">Simpan</button>
            
               </section>
@@ -147,6 +157,8 @@
                   <label class="form-control-label">Keterangan Interne: <span class="tx-danger">*</span></label>
                   <input id="ket_interne" class="form-control" name="ket_interne" placeholder="Masukkan Keterangan Interne" type="text" required>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit">Simpan</button>
+
               </section>
               <h3>EKG</h3>
               <section>
@@ -163,6 +175,7 @@
                   <label class="form-control-label">Keterangan EKG: <span class="tx-danger">*</span></label>
                   <input id="ket_ekg" class="form-control" name="ket_kg" placeholder="Masukkan Keterangan EKG" type="text" required>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit">Simpan</button>
               </section>
               <h3>Ergo</h3>
               <section>
@@ -421,6 +434,82 @@
                 });
                 alert('Penilaian Sudah dilakukan');
                 event.preventDefault();
+            });
+        });
+        </script>
+
+
+      <script type="text/javascript">
+        $(document).ready(function() {
+            $("#cek_imt").click(function(event) {
+
+                var base = '<?=base_url()?>';
+
+                var tinggi =  $('#tinggi').val();
+                var berat =  $('#berat').val();
+   
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/cek_imt",
+                    data:{ "tinggi": tinggi,
+                            "berat": berat
+
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+                       var obj=$.parseJSON(data);
+                        $("#imt").val(obj.imt);
+                        $("#u_imt").val(obj.status);
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                // event.preventDefault();
+            });
+        });
+        </script>
+
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_imt").click(function(event) {
+
+                var base = '<?=base_url()?>';
+
+                var tinggi =  $('#tinggi').val();
+                var berat =  $('#berat').val();
+                var imt =  $('#imt').val();
+                var u_imt =  $('#u_imt').val();
+                var ket_imt =  $('#ket_imt').val();
+   
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_imt",
+                    data:{ "tinggi": tinggi,
+                            "berat": berat,
+                            "imt" : imt,
+                            "u_imt" : u_imt,
+                            "ket_imt" :ket_imt
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                // event.preventDefault();
             });
         });
         </script>
