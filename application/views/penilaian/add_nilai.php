@@ -19,7 +19,7 @@
           float: none;
           position: static;
           width: 661px;
-          height: 1057px;
+          height: 1150px;
           padding: 40px;
       }
     </style>
@@ -284,7 +284,7 @@
                 <p>The next and previous buttons help you to navigate through your content.</p>
                 <div class="form-group wd-xs-300">
                   <label class="form-control-label">U USG: <span class="tx-danger">*</span></label>
-                  <input id="u_bedah" class="form-control" name="u_usg" placeholder="Masukkan Umum USG" type="text" required>
+                  <input id="u_usg" class="form-control" name="u_usg" placeholder="Masukkan Umum USG" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
                   <label class="form-control-label">Stakes USG: <span class="tx-danger">*</span></label>
@@ -325,8 +325,8 @@
                   <input id="nb_bawah" class="form-control" name="nb_bawah" placeholder="Masukkan Stakes Bawah" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <<label class="form-control-label">Keterangan Bawah:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_bawah" id="ket_nadi"></textarea>
+                  <label class="form-control-label">Keterangan Bawah:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_bawah" id="ket_bawah"></textarea>
                 </div><!-- form-group -->
                 <button class="btn btn-primary bd-0" type="submit" name="submit_bawah" id="submit_bawah">Simpan</button>
               </section>
@@ -555,14 +555,6 @@
                 var nb_nadi =  $('#nb_nadi').val();
                 var u_nadi =  $('#u_nadi').val();
                 var ket_nadi =  $('#ket_nadi').val();
-
-
-                console.log(no_casis);
-                console.log(tensi);
-                console.log(nadi);
-                console.log(nb_nadi);
-                console.log(u_nadi);
-                console.log(ket_nadi);
    
                 $.ajax({
                     type: "POST",
@@ -895,15 +887,17 @@
         $(document).ready(function() {
             $("#submit_usg").click(function(event) {
 
-                var base   = '<?php echo base_url();?>';
+                var base   = '<?=base_url()?>';
                 var no_casis = $('#no_casis').val();
                 var nb_usg =  $('#nb_usg').val();
                 var u_usg =  $('#u_usg').val();
                 var ket_usg =  $('#ket_usg').val();
 
+
+
                 $.ajax({
                     type: "POST",
-                    url: base + "penilaian/simpan_usge",
+                    url: base + "penilaian/simpan_usg",
                     data:{  "no_casis": no_casis,
                             "nb_usg": nb_usg,
                             "u_usg": u_usg,
@@ -932,11 +926,13 @@
         $(document).ready(function() {
             $("#submit_atas").click(function(event) {
 
-                var base = '<?//=base_url()?>';
+                var base = '<?=base_url()?>';
                 var no_casis = $('#no_casis').val();
                 var nb_atas =  $('#nb_atas').val();
                 var a_atas =  $('#a_atas').val();
                 var ket_atas =  $('#ket_atas').val();
+
+
 
 
                 $.ajax({
@@ -961,20 +957,25 @@
                     }
                 });
                 // alert('Penilaian Sudah dilakukan');
-                // event.preventDefault();
+                event.preventDefault();
             });
         });
         </script>
-<!--         <script type="text/javascript">
+        <script type="text/javascript">
         $(document).ready(function() {
             $("#submit_bawah").click(function(event) {
 
-                var base = '<?//=base_url()?>';
+                var base = '<?=base_url()?>';
                 var no_casis = $('#no_casis').val();
                 var nb_bawah =  $('#nb_bawah').val();
                 var b_bawah =  $('#b_bawah').val();
                 var ket_bawah =  $('#ket_bawah').val();
 
+                console.log(base);
+                console.log(no_casis);
+                console.log(nb_bawah);
+                console.log(b_bawah);
+                console.log(ket_bawah);
 
                 $.ajax({
                     type: "POST",
@@ -998,15 +999,15 @@
                     }
                 });
                 // alert('Penilaian Sudah dilakukan');
-                // event.preventDefault();
+                 event.preventDefault();
             });
         });
-        </script> -->
-<!--         <script type="text/javascript">
+        </script>
+        <script type="text/javascript">
         $(document).ready(function() {
             $("#submit_tht").click(function(event) {
 
-                
+                var base = '<?=base_url()?>';
                 var no_casis = $('#no_casis').val();
                 var nb_tht =  $('#nb_tht').val();
                 var t_tht =  $('#t_tht').val();
@@ -1035,19 +1036,25 @@
                     }
                 });
                 // alert('Penilaian Sudah dilakukan');
-                // event.preventDefault();
+                 event.preventDefault();
             });
         });
-        </script> -->
-<!--         <script type="text/javascript">
+        </script>
+        <script type="text/javascript">
         $(document).ready(function() {
             $("#submit_mata").click(function(event) {
 
-                var base = '<?//=base_url()?>';
+                var base = '<?=base_url()?>';
                 var no_casis = $('#no_casis').val();
                 var nb_mata =  $('#nb_mata').val();
-                var t_mata =  $('#t_mata').val();
+                var l_mata =  $('#l_mata').val();
                 var ket_mata =  $('#ket_mata').val();
+
+                console.log(base);
+                console.log(no_casis);
+                console.log(nb_mata);
+                console.log(l_mata);
+                console.log(ket_mata);
 
 
                 $.ajax({
@@ -1055,7 +1062,7 @@
                     url: base + "penilaian/simpan_mata",
                     data:{  "no_casis": no_casis,
                             "nb_mata": nb_mata,
-                            "t_mata": t_mata,
+                            "l_mata": l_mata,
                             "ket_mata" : ket_mata  
                          },
                     dataType: "html",
@@ -1072,15 +1079,15 @@
                     }
                 });
                 // alert('Penilaian Sudah dilakukan');
-                // event.preventDefault();
+                 event.preventDefault();
             });
         });
-        </script> -->
-<!--         <script type="text/javascript">
+        </script>
+        <script type="text/javascript">
         $(document).ready(function() {
             $("#submit_gigi").click(function(event) {
 
-                var base = '<?//=base_url()?>';
+                var base = '<?=base_url()?>';
                 var no_casis = $('#no_casis').val();
                 var nb_gigi =  $('#nb_gigi').val();
                 var g_gigi =  $('#g_gigi').val();
@@ -1109,20 +1116,25 @@
                     }
                 });
                 // alert('Penilaian Sudah dilakukan');
-                // event.preventDefault();
+                 event.preventDefault();
             });
         });
-        </script> -->
-        <!-- <script type="text/javascript">
+        </script>
+        <script type="text/javascript">
                 $(document).ready(function() {
                     $("#submit_jiwa").click(function(event) {
 
-                        var base = '<?//=base_url()?>';
+                        var base = '<?=base_url()?>';
                         var no_casis = $('#no_casis').val();
                         var nb_jiwa =  $('#nb_jiwa').val();
                         var j_jiwa =  $('#j_jiwa').val();
                         var ket_jiwa =  $('#ket_jiwa').val();
 
+                        console.log(base);
+                        console.log(no_casis);
+                        console.log(nb_jiwa);
+                        console.log(j_jiwa);
+                        console.log(ket_jiwa);
 
                         $.ajax({
                             type: "POST",
@@ -1146,9 +1158,9 @@
                             }
                         });
                         // alert('Penilaian Sudah dilakukan');
-                        // event.preventDefault();
+                        event.preventDefault();
                     });
                 });
-        </script> -->
+        </script>
   </body>
 </html>

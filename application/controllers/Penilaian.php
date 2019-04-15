@@ -121,6 +121,40 @@ class Penilaian extends CI_Controller {
         }
     }
 
+    function simpan_nadi(){
+        if(_is_user_login($this)){
+            if($_POST){
+
+                   $tensi = $this->input->post('tensi');
+                   $nadi = $this->input->post('nadi');
+                   $nb_nadi = $this->input->post('nb_nadi');
+                   $u_nadi = $this->input->post('u_nadi');
+                   $ket_nadi = $this->input->post('ket_nadi');
+                   $no_casis = $this->input->post('no_casis');
+
+
+                   $this->load->model("common_model");
+                   $this->common_model->data_insert("tensi",
+                                array(
+                                "tensi"=>$tensi,
+                                "nadi"=>$nadi,
+                                "nb_nadi"=>$nb_nadi,
+                                "u_nadi"=>$u_nadi,
+                                "ket_nadi"=>$ket_nadi,
+                                "no_casis"=>$no_casis,
+                                "flag_del" => 1,
+                                "created_by"=>_get_current_user_id($this),
+                                "date_created"=>date("Y-m-d H:i:sa")));
+
+
+                   $data = array();
+                   $data = array( 'sukses'=>'sukses' );
+                   echo json_encode($data);
+
+            }
+        }
+    }
+
     
     function simpan_interne(){
         if(_is_user_login($this)){
@@ -347,7 +381,7 @@ class Penilaian extends CI_Controller {
             }
         }
     }
-    function simpan_usge(){
+    function simpan_usg(){
         if(_is_user_login($this)){
             if($_POST){
 
@@ -355,8 +389,6 @@ class Penilaian extends CI_Controller {
                    $u_usg = $this->input->post('u_usg');
                    $ket_usg = $this->input->post('ket_usg');
                    $no_casis = $this->input->post('no_casis');
-
-                   var_dump($no_casis);
 
                    $this->load->model("common_model");
                    $this->common_model->data_insert("usg",
@@ -467,7 +499,7 @@ class Penilaian extends CI_Controller {
 
                    $nb_mata = $this->input->post('nb_mata');
                    $l_mata = $this->input->post('l_mata');
-                   $kel_mata = $this->input->post('kel_mata');
+                   $ket_mata = $this->input->post('ket_mata');
                    $no_casis = $this->input->post('no_casis');
 
                    $this->load->model("common_model");
@@ -523,7 +555,7 @@ class Penilaian extends CI_Controller {
 
                    $nb_jiwa = $this->input->post('nb_jiwa');
                    $j_jiwa = $this->input->post('j_jiwa');
-                   $kej_jiwa = $this->input->post('kej_jiwa');
+                   $ket_jiwa = $this->input->post('ket_jiwa');
                    $no_casis = $this->input->post('no_casis');
 
                    $this->load->model("common_model");
@@ -531,7 +563,7 @@ class Penilaian extends CI_Controller {
                                 array(
                                 "nb_jiwa"=>$nb_jiwa,
                                 "j_jiwa"=>$j_jiwa,
-                                "kej_jiwa"=>$kej_jiwa,
+                                "ket_jiwa"=>$ket_jiwa,
                                 "no_casis"=>$no_casis,
                                 "flag_del" => 1,
                                 "created_by"=>_get_current_user_id($this),
