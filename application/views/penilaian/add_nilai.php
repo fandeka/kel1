@@ -74,7 +74,7 @@
               <div class="col-md-4 mg-t--1 mg-md-t-0">
                 <div class="form-group mg-md-l--1 mg-md-t-0">
                   <label class="form-control-label">No Casis:</label>
-                  <input id="no_casis" class="form-control" type="text" name="no_casis" placeholder="" value="<?php echo $casis_rinci->no_casis;?>" disabled="true">
+                  <input id="no_casis" class="form-control" type="text" name="no_casis" id="no_casis" placeholder="" value="<?php echo $casis_rinci->no_casis;?>" disabled="true">
                 </div>
               </div><!-- col-8 -->
     
@@ -137,9 +137,9 @@
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
                   <label class="form-control-label">Keterangan Nadi:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_nadi"></textarea>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_nadi" id="ket_nadi"></textarea>
                 </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit">Simpan</button>
+                <button class="btn btn-primary bd-0" type="submit" name="submit_nadi" id="submit_nadi" >Simpan</button>
            
               </section>
               <h3>Interne</h3>
@@ -154,10 +154,10 @@
                   <input id="nb_interne" class="form-control" name="nb_interne" placeholder="Masukkan stakes Interne" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Interne: <span class="tx-danger">*</span></label>
-                  <input id="ket_interne" class="form-control" name="ket_interne" placeholder="Masukkan Keterangan Interne" type="text" required>
+                  <label class="form-control-label">Keterangan Interne:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_interne" id="ket_interne"></textarea>
                 </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit">Simpan</button>
+                <button class="btn btn-primary bd-0" type="submit" name="submit_interne" id="submit_interne">Simpan</button>
 
               </section>
               <h3>EKG</h3>
@@ -172,10 +172,10 @@
                   <input id="nb_ekg" class="form-control" name="nb_ekg" placeholder="Masukkan stakes EKG" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan EKG: <span class="tx-danger">*</span></label>
-                  <input id="ket_ekg" class="form-control" name="ket_kg" placeholder="Masukkan Keterangan EKG" type="text" required>
+                  <label class="form-control-label">Keterangan EKG:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_ekg" id="ket_ekg"></textarea>
                 </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit">Simpan</button>
+                <button class="btn btn-primary bd-0" type="submit" name="submit_ekg" id="submit_ekg">Simpan</button>
               </section>
               <h3>Ergo</h3>
               <section>
@@ -189,9 +189,10 @@
                   <input id="nb_ergo" class="form-control" name="nb_ergo" placeholder="Masukkan Stakes Ergo" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Ergo: <span class="tx-danger">*</span></label>
-                  <input id="ket_ergo" class="form-control" name="ket_ergo" placeholder="Masukkan Keterangan Ergo" type="text" required>
+                  <label class="form-control-label">Keterangan Ergo:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_ergo" id="ket_ergo"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_ergo" id="submit_ergo">Simpan</button>
               </section>
               <h3>Spiro</h3>
               <section>
@@ -205,9 +206,10 @@
                   <input id="nb_spiro" class="form-control" name="nb_spiro" placeholder="Masukkan Umum Spiro" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Spiro: <span class="tx-danger">*</span></label>
-                  <input id="ket_spiro" class="form-control" name="ket_spiro" placeholder="Masukkan Keterangan Spiro" type="text" required>
+                  <label class="form-control-label">Keterangan Spiro:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_spiro" id="ket_spiro"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_spiro" id="submit_spiro">Simpan</button>
               </section>
               <h3>Kulit</h3>
               <section>
@@ -221,9 +223,10 @@
                   <input id="nb_kulit" class="form-control" name="nb_kulit" placeholder="Masukkan Stakes Kulit" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Kulit: <span class="tx-danger">*</span></label>
-                  <input id="ket_kulit" class="form-control" name="ket_kulit" placeholder="Masukkan Keterangan Kulit" type="text" required>
+                  <label class="form-control-label">Keterangan Kulit:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_kulit" id="ket_kulit"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_kulit" id="submit_kulit">Simpan</button>
               </section>
               <h3>Rontgen</h3>
               <section>
@@ -237,9 +240,10 @@
                   <input id="nb_rontgen" class="form-control" name="nb_rontgen" placeholder="Masukkan Stakes Rontgen" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Rontgen: <span class="tx-danger">*</span></label>
-                  <input id="ket_rontgen" class="form-control" name="ket_rontgen" placeholder="Masukkan Keterangan Rontgen" type="text" required>
+                  <label class="form-control-label">Keterangan Rontgen:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_rontgen" id="ket_rontgen"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_rontgen" id="submit_rontgen">Simpan</button>
               </section> 
               <h3>Laboratorium</h3>
               <section>
@@ -253,9 +257,10 @@
                   <input id="nb_lab" class="form-control" name="nb_lab" placeholder="Masukkan Stakes LAB" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan LAB: <span class="tx-danger">*</span></label>
-                  <input id="ket_lab" class="form-control" name="ket_lab" placeholder="Masukkan Keterangan LAB" type="text" required>
+                  <label class="form-control-label">Keterangan LAB:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_lab" id="ket_lab"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_lab" id="submit_lab">Simpan</button>
               </section>
               <h3>Bedah</h3>
               <section>
@@ -269,9 +274,27 @@
                   <input id="nb_bedah" class="form-control" name="nb_bedah" placeholder="Masukkan Stakes Bedah" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Bedah: <span class="tx-danger">*</span></label>
-                  <input id="ket_bedah" class="form-control" name="ket_bedah" placeholder="Masukkan Keterangan Bedah" type="text" required>
+                  <label class="form-control-label">Keterangan Bedah:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_bedah" id="ket_bedah"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_bedah" id="submit_bedah">Simpan</button>
+              </section>
+              <h3>USG</h3>
+              <section>
+                <p>The next and previous buttons help you to navigate through your content.</p>
+                <div class="form-group wd-xs-300">
+                  <label class="form-control-label">U USG: <span class="tx-danger">*</span></label>
+                  <input id="u_bedah" class="form-control" name="u_usg" placeholder="Masukkan Umum USG" type="text" required>
+                </div><!-- form-group -->
+                <div class="form-group wd-xs-300">
+                  <label class="form-control-label">Stakes USG: <span class="tx-danger">*</span></label>
+                  <input id="nb_usg" class="form-control" name="nb_usg" placeholder="Masukkan Stakes USG" type="text" required>
+                </div><!-- form-group -->
+                <div class="form-group wd-xs-300">
+                  <label class="form-control-label">Keterangan USG:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_usg" id="ket_usg"></textarea>
+                </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_usg" id="submit_usg">Simpan</button>
               </section>
                <h3>Atas</h3>
               <section>
@@ -285,9 +308,10 @@
                   <input id="nb_atas" class="form-control" name="nb_atas" placeholder="Masukkan Stakes Atas" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Atas: <span class="tx-danger">*</span></label>
-                  <input id="ket_atas" class="form-control" name="ket_atas" placeholder="Masukkan Keterangan Atas" type="text" required>
+                  <label class="form-control-label">Keterangan Atas:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_atas" id="ket_atas"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit_atas" name="submit_atas" id="submit_atas">Simpan</button>
               </section>
               <h3>Bawah</h3>
               <section>
@@ -301,9 +325,10 @@
                   <input id="nb_bawah" class="form-control" name="nb_bawah" placeholder="Masukkan Stakes Bawah" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Bawah: <span class="tx-danger">*</span></label>
-                  <input id="ket_bawah" class="form-control" name="ket_bawah" placeholder="Masukkan Keterangan Bawah" type="text" required>
+                  <<label class="form-control-label">Keterangan Bawah:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_bawah" id="ket_nadi"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_bawah" id="submit_bawah">Simpan</button>
               </section>
               <h3>THT</h3>
               <section>
@@ -317,9 +342,10 @@
                   <input id="nb_tht" class="form-control" name="nb_tht" placeholder="Masukkan Stakes THT" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan THT: <span class="tx-danger">*</span></label>
-                  <input id="ket_tht" class="form-control" name="ket_tht" placeholder="Masukkan Keterangan THT" type="text" required>
+                  <label class="form-control-label">Keterangan THT:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_tht" id="ket_tht"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_tht" id="submit_tht">Simpan</button>
               </section>
               <h3>Mata</h3>
               <section>
@@ -333,9 +359,10 @@
                   <input id="nb_mata" class="form-control" name="nb_mata" placeholder="Masukkan Stakes Mata" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Mata: <span class="tx-danger">*</span></label>
-                  <input id="ket_mata" class="form-control" name="ket_mata" placeholder="Masukkan Keterangan THT" type="text" required>
+                  <label class="form-control-label">Keterangan Mata:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_mata" id="ket_mata"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_mata" id="submit_mata">Simpan</button>
               </section>
               <h3>Gigi</h3>
               <section>
@@ -349,9 +376,10 @@
                   <input id="nb_gigi" class="form-control" name="nb_gigi" placeholder="Masukkan Stakes Mata" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Gigi: <span class="tx-danger">*</span></label>
-                  <input id="ket_gigi" class="form-control" name="ket_gigi" placeholder="Masukkan Keterangan Gigi" type="text" required>
+                  <label class="form-control-label">Keterangan Gigi:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_gigi" id="ket_gigi"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_gigi" id="submit_gigi">Simpan</button>
               </section>
               <h3>Jiwa</h3>
               <section>
@@ -365,9 +393,10 @@
                   <input id="nb_jiwa" class="form-control" name="nb_jiwa" placeholder="Masukkan Stakes Jiwa" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Jiwa: <span class="tx-danger">*</span></label>
-                  <input id="ket_jiwa" class="form-control" name="ket_jiwa" placeholder="Masukkan Keterangan Jiwa" type="text" required>
+                  <label class="form-control-label">Keterangan Jiwai:</label>
+                  <textarea rows="3" class="form-control" placeholder="" name="ket_jiwa" id="ket_jiwa"></textarea>
                 </div><!-- form-group -->
+                <button class="btn btn-primary bd-0" type="submit" name="submit_jiwa" id="submit_jiwa">Simpan</button>
               </section>
 
 
@@ -468,7 +497,7 @@
                     }
                 });
                 // alert('Penilaian Sudah dilakukan');
-                // event.preventDefault();
+                 event.preventDefault();
             });
         });
         </script>
@@ -479,7 +508,7 @@
             $("#submit_imt").click(function(event) {
 
                 var base = '<?=base_url()?>';
-
+                var no_casis = $('#no_casis').val();
                 var tinggi =  $('#tinggi').val();
                 var berat =  $('#berat').val();
                 var imt =  $('#imt').val();
@@ -489,7 +518,8 @@
                 $.ajax({
                     type: "POST",
                     url: base + "penilaian/simpan_imt",
-                    data:{ "tinggi": tinggi,
+                    data:{  "no_casis": no_casis,
+                            "tinggi": tinggi,
                             "berat": berat,
                             "imt" : imt,
                             "u_imt" : u_imt,
@@ -509,10 +539,616 @@
                     }
                 });
                 // alert('Penilaian Sudah dilakukan');
-                // event.preventDefault();
+                 event.preventDefault();
             });
         });
         </script>
 
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_nadi").click(function(event) {
+
+                var base = '<?=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var tensi =  $('#tensi').val();
+                var nadi =  $('#nadi').val();
+                var nb_nadi =  $('#nb_nadi').val();
+                var u_nadi =  $('#u_nadi').val();
+                var ket_nadi =  $('#ket_nadi').val();
+
+
+                console.log(no_casis);
+                console.log(tensi);
+                console.log(nadi);
+                console.log(nb_nadi);
+                console.log(u_nadi);
+                console.log(ket_nadi);
+   
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_nadi",
+                    data:{  "no_casis": no_casis,
+                            "tensi": tensi,
+                            "nadi": nadi,
+                            "nb_nadi" : nb_nadi,
+                            "u_nadi" : u_nadi,
+                            "ket_nadi" :ket_nadi
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+               event.preventDefault();
+            });
+        });
+        </script>
+        </script>
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_interne").click(function(event) {
+
+                var base = '<?=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_interne =  $('#nb_interne').val();
+                var u_interne =  $('#u_interne').val();
+                var ket_interne =  $('#ket_interne').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_interne",
+                    data:{  "no_casis": no_casis,
+                            "nb_interne": nb_interne,
+                            "u_interne": u_interne,
+                            "ket_interne" : ket_interne  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+               event.preventDefault();
+            });
+        });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_ekg").click(function(event) {
+
+                var base = '<?=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_ekg =  $('#nb_ekg').val();
+                var u_ekg =  $('#u_ekg').val();
+                var ket_ekg =  $('#ket_interne').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_ekg",
+                    data:{  "no_casis": no_casis,
+                            "nb_ekg": nb_ekg,
+                            "u_ekg": u_ekg,
+                            "ket_ekg" : ket_ekg  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                 event.preventDefault();
+            });
+        });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_ergo").click(function(event) {
+
+                var base = '<?=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_ergo =  $('#nb_ergo').val();
+                var u_ergo =  $('#u_ergo').val();
+                var ket_ergo =  $('#ket_ergo').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_ergo",
+                    data:{  "no_casis": no_casis,
+                            "nb_ergo": nb_ergo,
+                            "u_ergo": u_ergo,
+                            "ket_ergo" : ket_ergo  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                 event.preventDefault();
+            });
+        });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_spiro").click(function(event) {
+
+                var base = '<?=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_spiro =  $('#nb_spiro').val();
+                var u_spiro =  $('#u_spiro').val();
+                var ket_spiro =  $('#ket_spiro').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_spiro",
+                    data:{  "no_casis": no_casis,
+                            "nb_spiro": nb_spiro,
+                            "u_spiro": u_spiro,
+                            "ket_spiro" : ket_spiro  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                 event.preventDefault();
+            });
+        });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_kulit").click(function(event) {
+
+                var base = '<?=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_kulit =  $('#nb_kulit').val();
+                var u_kulit =  $('#u_kulit').val();
+                var ket_kulit =  $('#ket_kulit').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_kulit",
+                    data:{  "no_casis": no_casis,
+                            "nb_kulit": nb_kulit,
+                            "u_kulit": u_kulit,
+                            "ket_kulit" : ket_kulit  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                 event.preventDefault();
+            });
+        });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_rontgen").click(function(event) {
+
+                var base = '<?=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_rontgen =  $('#nb_rontgen').val();
+                var u_rontgen =  $('#u_rontgen').val();
+                var ket_rontgen =  $('#ket_rontgen').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_rontgen",
+                    data:{  "no_casis": no_casis,
+                            "nb_rontgen": nb_rontgen,
+                            "u_rontgen": u_rontgen,
+                            "ket_rontgen" : ket_rontgen  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                 event.preventDefault();
+            });
+        });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_lab").click(function(event) {
+
+                var base = '<?=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_lab =  $('#nb_lab').val();
+                var u_lab =  $('#u_lab').val();
+                var ket_lab =  $('#ket_lab').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_lab",
+                    data:{  "no_casis": no_casis,
+                            "nb_lab": nb_lab,
+                            "u_lab": u_lab,
+                            "ket_lab" : ket_lab  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                 event.preventDefault();
+            });
+        });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_bedah").click(function(event) {
+
+                var base = '<?=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_bedah =  $('#nb_bedah').val();
+                var u_bedah =  $('#u_bedah').val();
+                var ket_bedah =  $('#ket_bedah').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_bedah",
+                    data:{  "no_casis": no_casis,
+                            "nb_bedah": nb_bedah,
+                            "u_bedah": u_bedah,
+                            "ket_bedah" : ket_bedah  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                event.preventDefault();
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_usg").click(function(event) {
+
+                var base   = '<?php echo base_url();?>';
+                var no_casis = $('#no_casis').val();
+                var nb_usg =  $('#nb_usg').val();
+                var u_usg =  $('#u_usg').val();
+                var ket_usg =  $('#ket_usg').val();
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_usge",
+                    data:{  "no_casis": no_casis,
+                            "nb_usg": nb_usg,
+                            "u_usg": u_usg,
+                            "ket_usg" : ket_usg  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                event.preventDefault();
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_atas").click(function(event) {
+
+                var base = '<?//=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_atas =  $('#nb_atas').val();
+                var a_atas =  $('#a_atas').val();
+                var ket_atas =  $('#ket_atas').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_atas",
+                    data:{  "no_casis": no_casis,
+                            "nb_atas": nb_atas,
+                            "a_atas": a_atas,
+                            "ket_atas" : ket_atas  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                // event.preventDefault();
+            });
+        });
+        </script>
+<!--         <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_bawah").click(function(event) {
+
+                var base = '<?//=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_bawah =  $('#nb_bawah').val();
+                var b_bawah =  $('#b_bawah').val();
+                var ket_bawah =  $('#ket_bawah').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_bawah",
+                    data:{  "no_casis": no_casis,
+                            "nb_bawah": nb_bawah,
+                            "b_bawah": b_bawah,
+                            "ket_bawah" : ket_bawah  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                // event.preventDefault();
+            });
+        });
+        </script> -->
+<!--         <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_tht").click(function(event) {
+
+                
+                var no_casis = $('#no_casis').val();
+                var nb_tht =  $('#nb_tht').val();
+                var t_tht =  $('#t_tht').val();
+                var ket_tht =  $('#ket_tht').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_tht",
+                    data:{  "no_casis": no_casis,
+                            "nb_tht": nb_tht,
+                            "t_tht": t_tht,
+                            "ket_tht" : ket_tht  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                // event.preventDefault();
+            });
+        });
+        </script> -->
+<!--         <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_mata").click(function(event) {
+
+                var base = '<?//=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_mata =  $('#nb_mata').val();
+                var t_mata =  $('#t_mata').val();
+                var ket_mata =  $('#ket_mata').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_mata",
+                    data:{  "no_casis": no_casis,
+                            "nb_mata": nb_mata,
+                            "t_mata": t_mata,
+                            "ket_mata" : ket_mata  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                // event.preventDefault();
+            });
+        });
+        </script> -->
+<!--         <script type="text/javascript">
+        $(document).ready(function() {
+            $("#submit_gigi").click(function(event) {
+
+                var base = '<?//=base_url()?>';
+                var no_casis = $('#no_casis').val();
+                var nb_gigi =  $('#nb_gigi').val();
+                var g_gigi =  $('#g_gigi').val();
+                var ket_gigi =  $('#ket_gigi').val();
+
+
+                $.ajax({
+                    type: "POST",
+                    url: base + "penilaian/simpan_gigi",
+                    data:{  "no_casis": no_casis,
+                            "nb_gigi": nb_gigi,
+                            "g_gigi": g_gigi,
+                            "ket_gigi" : ket_gigi  
+                         },
+                    dataType: "html",
+                    cache: false,
+                    success: function(data) {
+
+                      console.log(data);
+                      alert('Berhasil Tersimpan');
+
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    }
+                });
+                // alert('Penilaian Sudah dilakukan');
+                // event.preventDefault();
+            });
+        });
+        </script> -->
+        <!-- <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#submit_jiwa").click(function(event) {
+
+                        var base = '<?//=base_url()?>';
+                        var no_casis = $('#no_casis').val();
+                        var nb_jiwa =  $('#nb_jiwa').val();
+                        var j_jiwa =  $('#j_jiwa').val();
+                        var ket_jiwa =  $('#ket_jiwa').val();
+
+
+                        $.ajax({
+                            type: "POST",
+                            url: base + "penilaian/simpan_jiwa",
+                            data:{  "no_casis": no_casis,
+                                    "nb_jiwa": nb_jiwa,
+                                    "j_jiwa": j_jiwa,
+                                    "ket_jiwa" : ket_jiwa  
+                                 },
+                            dataType: "html",
+                            cache: false,
+                            success: function(data) {
+
+                              console.log(data);
+                              alert('Berhasil Tersimpan');
+
+                            },
+                            error: function (data) {
+                                console.log('An error occurred.');
+                                console.log(data);
+                            }
+                        });
+                        // alert('Penilaian Sudah dilakukan');
+                        // event.preventDefault();
+                    });
+                });
+        </script> -->
   </body>
 </html>
