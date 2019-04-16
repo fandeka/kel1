@@ -334,7 +334,7 @@
               <section>
                 <p>The next and previous buttons help you to navigate through your content.</p>
                 <div class="form-group wd-xs-300">
-                  <label class="form-control-label">T THT: <span class="tx-danger">*</span></label>
+                  <label class="form-control-label">D THT: <span class="tx-danger">*</span></label>
                   <input id="t_tht" class="form-control" name="t_tht" placeholder="Masukkan THT" type="text" required>
                 </div><!-- form-group -->
                 <div class="form-group wd-xs-300">
