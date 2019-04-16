@@ -37,6 +37,23 @@ class Penilaian extends CI_Controller {
                 $this->load->model("penilaian_model");
 
                 $data['data_imt'] = $this->penilaian_model->get_imt_by_casis($no_casis);
+                $data['data_tensi'] = $this->penilaian_model->get_tensi_by_casis($no_casis);
+                $data['data_interne'] = $this->penilaian_model->get_interne_by_casis($no_casis);
+                $data['data_ekg'] = $this->penilaian_model->get_ekg_by_casis($no_casis);
+                $data['data_ergo'] = $this->penilaian_model->get_ergo_by_casis($no_casis);
+                $data['data_spiro'] = $this->penilaian_model->get_spiro_by_casis($no_casis);
+                $data['data_rontgen'] = $this->penilaian_model->get_rontgen_by_casis($no_casis);
+                $data['data_kulit'] = $this->penilaian_model->get_kulit_by_casis($no_casis);
+                $data['data_lab'] = $this->penilaian_model->get_lab_by_casis($no_casis);
+                $data['data_bedah'] = $this->penilaian_model->get_bedah_by_casis($no_casis);
+                $data['data_usg'] = $this->penilaian_model->get_usg_by_casis($no_casis);
+                $data['data_atas'] = $this->penilaian_model->get_atas_by_casis($no_casis);
+                $data['data_bawah'] = $this->penilaian_model->get_bawah_by_casis($no_casis);
+                $data['data_tht'] = $this->penilaian_model->get_tht_by_casis($no_casis);
+                $data['data_mata'] = $this->penilaian_model->get_mata_by_casis($no_casis);
+                $data['data_gigi'] = $this->penilaian_model->get_gigi_by_casis($no_casis);
+                $data['data_jiwa'] = $this->penilaian_model->get_jiwa_by_casis($no_casis);
+
 
 
 

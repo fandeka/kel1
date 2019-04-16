@@ -27,7 +27,88 @@ public function get_penilaian_by_id($id){
     }
 
      public function get_imt_by_casis($no_casis){
-        $q = $this->db->query("select * from tinggi_berat where no_casis='".$no_casis."' order by id desc limit 1");
+        $q = $this->db->query("select * from tinggi_berat where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+
+     public function get_tensi_by_casis($no_casis){
+        $q = $this->db->query("select * from tensi where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_interne_by_casis($no_casis){
+        $q = $this->db->query("select * from interne where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_ekg_by_casis($no_casis){
+        $q = $this->db->query("select * from ekg where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_ergo_by_casis($no_casis){
+        $q = $this->db->query("select * from ergo where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_spiro_by_casis($no_casis){
+        $q = $this->db->query("select * from spiro where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_kulit_by_casis($no_casis){
+        $q = $this->db->query("select * from kulit where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_rontgen_by_casis($no_casis){
+        $q = $this->db->query("select * from rontgen where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_bedah_by_casis($no_casis){
+        $q = $this->db->query("select * from bedah where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_lab_by_casis($no_casis){
+        $q = $this->db->query("select * from lab where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_usg_by_casis($no_casis){
+        $q = $this->db->query("select * from usg where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_atas_by_casis($no_casis){
+        $q = $this->db->query("select * from atas where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_bawah_by_casis($no_casis){
+        $q = $this->db->query("select * from bawah where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_tht_by_casis($no_casis){
+        $q = $this->db->query("select * from tht where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_mata_by_casis($no_casis){
+        $q = $this->db->query("select * from mata where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_gigi_by_casis($no_casis){
+        $q = $this->db->query("select * from gigi where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_jiwa_by_casis($no_casis){
+        $q = $this->db->query("select * from jiwa where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
         return $q->row();
     }
 }
