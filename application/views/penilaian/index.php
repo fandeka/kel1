@@ -32,7 +32,8 @@
         <div class="section-wrapper">
 
           <label class="section-title">Penilaian</label>
-          <p class="mg-b-20 mg-sm-b-40">Untuk melakukan penilaian, silahkan Anda klik button di samping setiap nama</p>
+          <p class="mg-b-20 mg-sm-b-40"> <font color='#0e72f3'><i class="icon ion-calculator"></i></font> Untuk melakukan penilaian, silahkan Anda klik button <font color='#0e72f3'>biru</font> di samping setiap nama  </p>
+          <p class="mg-b-20 mg-sm-b-40"> <font color='#0ef392'><i class="icon ion-pie-graph"></i></font> Untuk melihat hasil nilai, silahkan Anda klik button <font color='#0ef392'>hijau</font> di samping setiap nama  </p>
 
           <br>
           <div class="table-wrapper">

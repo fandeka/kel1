@@ -1,7 +1,7 @@
     <div class="slim-header">
       <div class="container">
         <div class="slim-header-left">
-          <h2 class="slim-logo"><a href="index.html">Urikkes Mabes TNI<span></span></a></h2>
+          <h2 class="slim-logo"><a href="index.html">Urikkes Werving TNI<span></span></a></h2>
         </div><!-- slim-header-left -->
         <div class="slim-header-right">
           

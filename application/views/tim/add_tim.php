@@ -28,7 +28,7 @@
         </div><!-- slim-pageheader -->
 
         <div class="section-wrapper mg-t-20">
-          <label class="section-title">Tambah Data Tim</label>
+          <label class="section-title">Tambah Data Tim Rikkes</label>
           <p class="mg-b-20 mg-sm-b-40">Masukan Data Sesuai Form.</p>
 
 

@@ -31,7 +31,7 @@
                 </div>
                 <form class="login100-form validate-form" method="post" action="#">
                     <span class="login100-form-title">
-                        Urikkes Mabes TNI
+                        Urikkes Werving TNI
 
                         <div class="login100-picTNI js-tilt" data-tilt>
                      <img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/Pmi.png"); ?>" alt="IMG">
