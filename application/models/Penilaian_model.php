@@ -25,5 +25,10 @@ public function get_penilaian_by_id($id){
         $q = $this->db->query("select * from casis where flag_del = 1 and id = '".$id."'");
         return $q->row();
     }
+
+     public function get_imt_by_casis($no_casis){
+        $q = $this->db->query("select * from tinggi_berat where no_casis='".$no_casis."' order by id desc limit 1");
+        return $q->row();
+    }
 }
 ?>

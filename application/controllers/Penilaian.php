@@ -33,6 +33,11 @@ class Penilaian extends CI_Controller {
 
                 $this->load->model("casis_model");
                 $data['casis_rinci']  = $this->casis_model->get_casis_rinci_filter_by_flag_del($id);
+                $no_casis = $data['casis_rinci']->no_casis;
+                $this->load->model("penilaian_model");
+
+                $data['data_imt'] = $this->penilaian_model->get_imt_by_casis($no_casis);
+
 
 
                 
