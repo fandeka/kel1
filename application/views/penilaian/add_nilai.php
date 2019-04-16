@@ -88,15 +88,15 @@
 
             <div id="wizard3">
               <h3>Tinggi & Berat</h3>
-              <section>
+              <section> 
                 <p>Try the keyboard navigation by clicking arrow left or right!</p>
                   <div class="form-group wd-xs-300">
                     <label class="form-control-label">Tinggi Badan: <span class="tx-danger">*</span></label>
-                    <input id="tinggi" class="form-control" name="tb" placeholder="cm" type="text" required>
+                    <input id="tinggi" class="form-control" name="tb" placeholder="cm" type="text" value="<?php if(!empty($data_imt)){ echo $data_imt->tb; } ?>"required>
                   </div><!-- form-group -->
                   <div class="form-group wd-xs-300">
                     <label class="form-control-label">Berat Badan: <span class="tx-danger">*</span></label>
-                    <input id="berat" class="form-control" name="bb" placeholder="kg" type="text" required> 
+                    <input id="berat" class="form-control" name="bb" placeholder="kg" type="text" value="<?php if(!empty($data_imt)){ echo $data_imt->bb; } ?>" required> 
                   </div>
                   <br>
                   <div class="form-group wd-xs-300">
@@ -104,15 +104,17 @@
                   </div><!-- form-group -->
                   <div class="form-group wd-xs-300">
                     <label class="form-control-label">IMT:</label>
-                    <input id="imt" class="form-control" name="imt" placeholder="IMT" type="text" disabled="true">
+                    <input id="imt" class="form-control" name="imt" placeholder="IMT" type="text" disabled="true" value="<?php if(!empty($data_imt)){ echo $data_imt->imt; } ?>">
                   </div><!-- form-group -->
                   <div class="form-group wd-xs-300">
                     <label class="form-control-label">U IMT:</label>
-                    <input id="u_imt" class="form-control" name="u_imt" placeholder="U_IMT" type="text" disabled="true">
+                    <input id="u_imt" class="form-control" name="u_imt" placeholder="U_IMT" type="text" disabled="true" value="<?php if(!empty($data_imt)){ echo $data_imt->u_imt; } ?>">
                   </div><!-- form-group -->
                   <div class="form-group wd-xs-300">
                     <label class="form-control-label">Keterangan IMT:</label>
-                    <textarea rows="3" class="form-control" placeholder="" name="ket_imt" id="ket_imt"></textarea>
+                    <textarea rows="3" class="form-control" placeholder="" name="ket_imt" id="ket_imt">
+                      <?php if(!empty($data_imt)){ echo $data_imt->ket_imt; } ?>
+                    </textarea>
                   </div><!-- form-group -->
                   <button class="btn btn-primary bd-0" type="submit" name="submit_imt" id="submit_imt">Simpan</button>
               </section>
