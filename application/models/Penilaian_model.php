@@ -111,5 +111,17 @@ public function get_penilaian_by_id($id){
         $q = $this->db->query("select * from jiwa where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
         return $q->row();
     }
+
+
+    public function get_nilai_bobot($nilai_u){
+        $q = $this->db->query("select * from nilai_bobot where nb_huruf='".$nilai_u."'order by id desc limit 1");
+        return $q->row();
+    }
+
+    public function get_hasil_nilai_by_casis($no_casis){
+        $q = $this->db->query("select * from hasil_nilai where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
 }
 ?>

@@ -41,7 +41,7 @@
               <thead>
                 <tr>
                     <th class="wd-5p">No</th>
-                    <th class="wd-5p">NoCasis</th>
+                    <th class="wd-5p">No Casis</th>
                     <th class="wd-5p">Foto</th>
                     <th class="wd-5p">Nama</th>
                     <th class="wd-5p">TTL</th>
@@ -73,9 +73,17 @@
                     <td><?php echo $casis->tempat_lahir; ?>, <?php echo $casis->tanggal_lahir; ?></td>
                     <td><?php echo $casis->j_kel; ?></td>
                     <td>
-                      <a href="<?php echo site_url("penilaian/lihat_nilai"); ?>" class="btn btn-teal btn-icon rounded-circle" data-toggle="tooltip-teal" data-placement="left" title="" data-original-title="Hasil Penilaian"><div><i class="icon ion-pie-graph"></i></div></a>
+                      <a href="<?php echo site_url("penilaian/lihat_nilai/".$casis->id); ?>" class="btn btn-teal btn-icon rounded-circle" data-toggle="tooltip-teal" data-placement="left" title="" data-original-title="Hasil Penilaian"><div><i class="icon ion-pie-graph"></i></div></a>
                       &nbsp;&nbsp;
+                      <?php 
+                      $this->load->model("penilaian_model");
+                      $data['hasil_nilai'] = $this->penilaian_model->get_hasil_nilai_by_casis($casis->no_casis);
+                      if (empty($data['hasil_nilai'])) { ?>
+                      
                       <a href="<?php echo site_url("penilaian/add_nilai/".$casis->id); ?>" class="btn btn-primary btn-icon rounded-circle" data-toggle="tooltip-primary" data-placement="right" title="" data-original-title="Beri Penilaian"><div><i class="icon ion-calculator"></i></div></a>
+
+
+                      <?php }?>
 
                     </td>
 

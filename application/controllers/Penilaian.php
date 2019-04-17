@@ -16,7 +16,6 @@ class Penilaian extends CI_Controller {
             $data = array();
             $this->load->model("penilaian_model");
             $data["penilaian_rikkes"] = $this->penilaian_model->get_penilaian_filter_by_flag_del();
-            // $this->load->view("tim/index",$data);
             $this->load->view("penilaian/index",$data);
         }
     }
@@ -55,23 +54,11 @@ class Penilaian extends CI_Controller {
                 $data['data_jiwa'] = $this->penilaian_model->get_jiwa_by_casis($no_casis);
 
 
-
-
-                
                 $this->load->view("penilaian/add_nilai",$data);
             }
         }
         
-    function hitung_nilai($id){
-        if(_is_user_login($this)){
-            if($_POST){
 
-                    var_dump($id); exit();
-            }
-
-        }
-
-    }
 
     function cek_imt(){
         if(_is_user_login($this)){
@@ -599,4 +586,236 @@ class Penilaian extends CI_Controller {
             }
         }
     }
+
+    function hitung_nilai(){
+
+
+      if(_is_user_login($this)){
+          if($_POST){
+
+                $no_casis = $this->input->post('no_casis');
+                $this->load->model("penilaian_model");
+                $data = array();
+
+                $data['data_imt'] = $this->penilaian_model->get_imt_by_casis($no_casis);
+                $data['data_tensi'] = $this->penilaian_model->get_tensi_by_casis($no_casis);
+                $data['data_interne'] = $this->penilaian_model->get_interne_by_casis($no_casis);
+                $data['data_ekg'] = $this->penilaian_model->get_ekg_by_casis($no_casis);
+                $data['data_ergo'] = $this->penilaian_model->get_ergo_by_casis($no_casis);
+                $data['data_spiro'] = $this->penilaian_model->get_spiro_by_casis($no_casis);
+                $data['data_rontgen'] = $this->penilaian_model->get_rontgen_by_casis($no_casis);
+                $data['data_kulit'] = $this->penilaian_model->get_kulit_by_casis($no_casis);
+                $data['data_lab'] = $this->penilaian_model->get_lab_by_casis($no_casis);
+                $data['data_bedah'] = $this->penilaian_model->get_bedah_by_casis($no_casis);
+                $data['data_usg'] = $this->penilaian_model->get_usg_by_casis($no_casis);
+                $data['data_atas'] = $this->penilaian_model->get_atas_by_casis($no_casis);
+                $data['data_bawah'] = $this->penilaian_model->get_bawah_by_casis($no_casis);
+                $data['data_tht'] = $this->penilaian_model->get_tht_by_casis($no_casis);
+                $data['data_mata'] = $this->penilaian_model->get_mata_by_casis($no_casis);
+                $data['data_gigi'] = $this->penilaian_model->get_gigi_by_casis($no_casis);
+                $data['data_jiwa'] = $this->penilaian_model->get_jiwa_by_casis($no_casis);
+
+                // umum
+                $u_imt = $data['data_imt']->u_imt;
+                $nb_nadi = $data['data_tensi']->nb_nadi;
+                $nb_interne = $data['data_interne']->nb_interne;
+                $nb_ekg = $data['data_ekg']->nb_ekg;
+                $nb_ergo = $data['data_ergo']->nb_ergo;
+                $nb_spiro = $data['data_spiro']->nb_spiro;
+                $nb_rontgen = $data['data_rontgen']->nb_rontgen;
+                $nb_kulit = $data['data_kulit']->nb_kulit;
+                $nb_lab = $data['data_lab']->nb_lab;
+                $nb_bedah = $data['data_bedah']->nb_bedah;
+                $nb_usg = $data['data_usg']->nb_usg;
+                $nb_tht = $data['data_tht']->nb_tht;
+
+                // atas
+                $nb_atas = $data['data_atas']->nb_atas;
+
+                // bawah
+                $nb_bawah = $data['data_bawah']->nb_bawah;
+
+                //mata
+                $nb_mata = $data['data_mata']->nb_mata;
+
+                //gigi
+                $nb_gigi = $data['data_gigi']->nb_gigi;
+
+                //jiwa
+                $nb_jiwa = $data['data_jiwa']->nb_jiwa;
+
+      
+                $data_nb = array(
+                            $u_imt,
+                            $nb_nadi,
+                            $nb_interne,
+                            $nb_ekg,
+                            $nb_ergo,
+                            $nb_spiro,
+                            $nb_rontgen, 
+                            $nb_kulit,
+                            $nb_lab,
+                            $nb_kulit,
+                            $nb_bedah,
+                            $nb_usg,
+                            $nb_tht
+                            );
+                $data_nb_short = array();
+                rsort($data_nb);
+                $umum = $data_nb[0];
+
+               
+                $nilai['umum'] = $this->penilaian_model->get_nilai_bobot($umum); 
+                $nilai['nb_atas'] = $this->penilaian_model->get_nilai_bobot($nb_atas);
+                $nilai['nb_bawah'] = $this->penilaian_model->get_nilai_bobot($nb_bawah);
+                $nilai['nb_mata'] = $this->penilaian_model->get_nilai_bobot($nb_mata);
+                $nilai['nb_gigi'] = $this->penilaian_model->get_nilai_bobot($nb_gigi);
+                $nilai['nb_jiwa'] = $this->penilaian_model->get_nilai_bobot($nb_jiwa);
+
+
+                $this->load->model("common_model");
+                $this->common_model->data_insert("rumus_stakes_casis",
+                                array(
+                                "no_casis" => $no_casis,
+                                "u"=>$nilai['umum']->nb_angka,
+                                "a"=>$nilai['nb_atas']->nb_angka,
+                                "b"=>$nilai['nb_bawah']->nb_angka,
+                                "l"=>$nilai['nb_mata']->nb_angka,
+                                "g" =>$nilai['nb_gigi']->nb_angka,
+                                "j" =>$nilai['nb_jiwa']->nb_angka,
+                                "d" => null
+                                ));
+
+
+                $data_nilai_huruf = array(
+                                    $umum,
+                                    $nb_atas,
+                                    $nb_bawah,
+                                    $nb_mata,
+                                    $nb_gigi,
+                                    $nb_jiwa
+                                    );
+
+
+                rsort($data_nilai_huruf); 
+
+                $kesum = $data_nilai_huruf[0];
+                $hasil['kesum'] = $this->penilaian_model->get_nilai_bobot($kesum);
+
+                $keterangan_lulus =  $hasil['kesum']->ket_nb_huruf;
+
+                $array_bobot = array(
+                            $u_imt,
+                            $nb_nadi,
+                            $nb_interne,
+                            $nb_ekg,
+                            $nb_ergo,
+                            $nb_spiro,
+                            $nb_rontgen, 
+                            $nb_kulit,
+                            $nb_lab,
+                            $nb_kulit,
+                            $nb_bedah,
+                            $nb_usg,
+                            $nb_tht,
+                            $nb_atas,
+                            $nb_bawah,
+                            $nb_mata,
+                            $nb_gigi
+                          );
+
+                $counts = array_count_values($array_bobot);
+                $count_K1=@$counts['K1'];
+                $count_C=@$counts['C'];
+                if ($count_K1 == null) {
+                  $count_K1 = 0;
+                }
+                if ($count_C == null) {
+                  $count_C = 0;
+                }
+
+
+                if ($data['data_jiwa']->j_jiwa == 'J1'){
+                    if ($kesum == "B"){
+                      $hasil_rikkes = 77;
+                    }elseif($kesum == "C"){
+                      $hasil_rikkes = 75-(($count_C*9)/16);
+                    }elseif($kesum == "K1"){
+                      $hasil_rikkes = 65-(($count_K1*9)/16);
+                    } else {
+                      $hasil_rikkes = 54;
+                    }
+                 } elseif ($data['data_jiwa']->j_jiwa == 'J2') {
+                    if ($kesum == "B"){
+                      $hasil_rikkes = 77-1;
+                    }elseif($kesum == "C"){
+                      $hasil_rikkes = (75-(($count_C*9)/16))-1;
+                    }elseif($kesum == "K1"){
+                      $hasil_rikkes = (65-(($count_K1*9)/16))-1;
+                    } else {
+                      $hasil_rikkes = 54-1;
+                    }
+                 
+                 } elseif ($data['data_jiwa']->j_jiwa == 'J3') {
+                 
+                    $hasil_rikkes = 53;
+                 } else {
+                    $hasil_rikkes = 53;
+                 }
+
+                $this->load->model("common_model");
+                $this->common_model->data_insert("hasil_nilai",
+                                array(
+                                "no_casis" => $no_casis,
+                                "hasil_kesum"=>$kesum,
+                                "hasil_rikkes"=>$hasil_rikkes,
+                                "keterangan"=>$keterangan_lulus,
+                                "flag_del" => 1,
+                                "created_by"=>_get_current_user_id($this),
+                                "date_created"=>date("Y-m-d H:i:sa")));
+
+                  $data = array();
+                  $data = array( 'sukses'=>'sukses' );
+                  echo json_encode($data);
+
+          }
+
+      }           
+    }
+
+    function lihat_nilai($id){
+            if(_is_user_login($this)){
+                $data['status_penilaian'] = 'active';
+
+                $this->load->model("casis_model");
+                $data['casis_rinci']  = $this->casis_model->get_casis_rinci_filter_by_flag_del($id);
+                $no_casis = $data['casis_rinci']->no_casis;
+                $this->load->model("penilaian_model");
+
+                $data['data_imt'] = $this->penilaian_model->get_imt_by_casis($no_casis);
+                $data['data_tensi'] = $this->penilaian_model->get_tensi_by_casis($no_casis);
+                $data['data_interne'] = $this->penilaian_model->get_interne_by_casis($no_casis);
+                $data['data_ekg'] = $this->penilaian_model->get_ekg_by_casis($no_casis);
+                $data['data_ergo'] = $this->penilaian_model->get_ergo_by_casis($no_casis);
+                $data['data_spiro'] = $this->penilaian_model->get_spiro_by_casis($no_casis);
+                $data['data_rontgen'] = $this->penilaian_model->get_rontgen_by_casis($no_casis);
+                $data['data_kulit'] = $this->penilaian_model->get_kulit_by_casis($no_casis);
+                $data['data_lab'] = $this->penilaian_model->get_lab_by_casis($no_casis);
+                $data['data_bedah'] = $this->penilaian_model->get_bedah_by_casis($no_casis);
+                $data['data_usg'] = $this->penilaian_model->get_usg_by_casis($no_casis);
+                $data['data_atas'] = $this->penilaian_model->get_atas_by_casis($no_casis);
+                $data['data_bawah'] = $this->penilaian_model->get_bawah_by_casis($no_casis);
+                $data['data_tht'] = $this->penilaian_model->get_tht_by_casis($no_casis);
+                $data['data_mata'] = $this->penilaian_model->get_mata_by_casis($no_casis);
+                $data['data_gigi'] = $this->penilaian_model->get_gigi_by_casis($no_casis);
+                $data['data_jiwa'] = $this->penilaian_model->get_jiwa_by_casis($no_casis);
+
+
+                $data['hasil_nilai'] = $this->penilaian_model->get_hasil_nilai_by_casis($no_casis);
+
+
+                $this->load->view("penilaian/lihat_nilai",$data);
+            }
+        }
+
 }

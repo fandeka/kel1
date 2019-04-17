@@ -36,17 +36,19 @@
           <ol class="breadcrumb slim-breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Tes Rikkes</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Penilaian</li>
+            <li class="breadcrumb-item active" aria-current="page">Hasil Rikkes</li>
           </ol>
-          <h6 class="slim-pagetitle">Penilaian</h6>
+          <h6 class="slim-pagetitle">Hasil Rikkes</h6>
         </div><!-- slim-pageheader -->
 
           <div class="section-wrapper mg-t-20">
-          <label class="section-title">Penilaian</label>
-          <p class="mg-b-20 mg-sm-b-40">A basic form wizard with form validation using Parsley js form validation plugin.</p>
+          <label class="section-title">Hasil Rikkes</label>
+          <p class="mg-b-20 mg-sm-b-40"></p>
+          <br>
 
-          <form>
+          <form action="#" method="post" enctype="multipart/form-data">
 
+         
                 <div class="row">
                   <div class="col-sm-6 col-md-2">
                     <?php
@@ -63,390 +65,98 @@
 
               <br>
               <br>
+
           <div class="form-layout form-layout-2">
             <div class="row no-gutters">
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <div class="form-group">
-                  <label class="form-control-label">Nama:</label>
-                  <input class="form-control" type="text" name="nama" placeholder="" value="<?php echo $casis_rinci->nama;?>" disabled="true">
+                  <label class="form-control-label">Nama: </label>
+                  <input class="form-control" type="text" name="nama" placeholder="" disabled="true" value="<?php
+                  echo @$casis_rinci->nama; ?>">
                 </div>
               </div>
-              <div class="col-md-4 mg-t--1 mg-md-t-0">
+              <div class="col-md-2">
                 <div class="form-group mg-md-l--1 mg-md-t-0">
-                  <label class="form-control-label">No Casis:</label>
-                  <input id="no_casis" class="form-control" type="text" name="no_casis" id="no_casis" placeholder="" value="<?php echo $casis_rinci->no_casis;?>" disabled="true">
+                  <label class="form-control-label">Tempat Lahir: </label>
+                  <input class="form-control" type="text" name="tempat_lahir" disabled="true" value="<?php
+                  echo @$casis_rinci->tanggal_lahir; ?>">
                 </div>
               </div><!-- col-8 -->
-    
+              <div class="col-md-4 mg-t--1 mg-md-t-0">
+                <div class="form-group mg-md-l--1">
+                
+                    <label class="form-control-label"><i class="icon ion-calendar tx-16 lh-50 op-20"></i> Tanggal Lahir: </label>
+                    <input id="datepickerNoOfMonths" type="text" class="form-control" placeholder="DD-MM-YYYY" name="tanggal_lahir" disabled="true" value="<?php
+                  echo @$casis_rinci->tanggal_lahir; ?>">
+               
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group bd-t-0-force">
+                  <label class="form-control-label">No Casis: </label>
+                  <input class="form-control" type="text" name="no_casis" disabled="true" value="<?php
+                  echo @$casis_rinci->no_casis; ?>">
+                </div>
+              </div><!-- col-4 --><!-- col-4 -->
+              <div class="col-md-4">
+                <div class="form-group mg-md-l--1 bd-t-0-force">
+                  <label class="form-control-label">Jenis Kelamin: </label>
+                  <input class="form-control" type="text" name="" placeholder="" disabled="true" value="<?php
+                  echo @$casis_rinci->j_kel; ?> ">
+                </div>
+              </div><!-- col-8 -->
+              <div class="col-md-4">
+                <div class="form-group bd-t-0-force">
+                  <label class="form-control-label">Program: </label>
+                  <input class="form-control" type="text" name="program" placeholder="" disabled="true" value="<?php
+                  echo @$casis_rinci->program; ?> ">
+                </div>
+              </div><!-- col-4 --><!-- col-4 -->
+              <div class="col-md-4">
+                <div class="form-group mg-md-l--1 bd-t-0-force">
+                  <label class="form-control-label">Universitas: </label>
+                  <input class="form-control" type="text" name="universitas" placeholder="" disabled="true" value="<?php
+                  echo @$casis_rinci->universitas; ?> ">
+                </div>
+              </div><!-- col-8 -->
+              <div class="col-md-4">
+                <div class="form-group mg-md-l--1 bd-t-0-force">
+                  <label class="form-control-label">IPK : </label>
+                  <input class="form-control" type="text" name="ipk" placeholder="" disabled="true" value="<?php
+                  echo @$casis_rinci->ipk; ?> ">
+                </div>
+              </div><!-- col-8 -->
+              <div class="col-md-6">
+                <div class="form-group bd-t-0-force">
+                  <label class="form-control-label">Panda: </label>
+                  <input class="form-control" type="text" name="panda" placeholder="" disabled="true" value="<?php
+                  echo @$casis_rinci->panda; ?> ">
+                </div>
+              </div><!-- col-8 -->
+              <div class="col-md-6">
+                <div class="form-group mg-md-l--1 bd-t-0-force">
+                  <label class="form-control-label">Kelas: </label>
+                  <input class="form-control" type="text" name="kelas" placeholder="" disabled="true" value="<?php
+                  echo @$casis_rinci->kelas; ?> ">
+                </div>
+              </div><!-- col-8 -->
             </div><!-- row -->
           </div><!-- form-layout -->
           </form>
 
-          <div class="section-wrapper mg-t-20">
-            <label class="section-title">Vertical Orientation Wizard</label>
-            <p class="mg-b-20 mg-sm-b-40">A basic content wizard with vertical orientation.</p>
-
-            <div id="wizard3">
-              <h3>Tinggi & Berat</h3>
-              <section> 
-                <p>Isikan sesuai dengan form IMT</p>
-                  <div class="form-group wd-xs-300">
-                    <label class="form-control-label">Tinggi Badan: <span class="tx-danger">*</span></label>
-                    <input id="tinggi" class="form-control" name="tb" placeholder="cm" type="text" value="<?php if(!empty($data_imt)){ echo $data_imt->tb; } ?>"required>
-                  </div><!-- form-group -->
-                  <div class="form-group wd-xs-300">
-                    <label class="form-control-label">Berat Badan: <span class="tx-danger">*</span></label>
-                    <input id="berat" class="form-control" name="bb" placeholder="kg" type="text" value="<?php if(!empty($data_imt)){ echo $data_imt->bb; } ?>" required> 
-                  </div>
-                  <br>
-                  <div class="form-group wd-xs-300">
-                    <button class="btn btn-primary" type="submit" name="cek_imt" id="cek_imt">Cek IMT</button>
-                  </div><!-- form-group -->
-                  <div class="form-group wd-xs-300">
-                    <label class="form-control-label">IMT:</label>
-                    <input id="imt" class="form-control" name="imt" placeholder="IMT" type="text" disabled="true" value="<?php if(!empty($data_imt)){ echo $data_imt->imt; } ?>">
-                  </div><!-- form-group -->
-                  <div class="form-group wd-xs-300">
-                    <label class="form-control-label">U IMT:</label>
-                    <input id="u_imt" class="form-control" name="u_imt" placeholder="U_IMT" type="text" disabled="true" value="<?php if(!empty($data_imt)){ echo $data_imt->u_imt; } ?>">
-                  </div><!-- form-group -->
-                  <div class="form-group wd-xs-300">
-                    <label class="form-control-label">Keterangan IMT:</label>
-                    <textarea rows="3" class="form-control" placeholder="" name="ket_imt" id="ket_imt">
-                      <?php if(!empty($data_imt)){ echo $data_imt->ket_imt; } ?>
-                    </textarea>
-                  </div><!-- form-group -->
-                  <button class="btn btn-primary bd-0" type="submit" name="submit_imt" id="submit_imt">Simpan</button>
-              </section>
-              <h3>Tensi</h3>
-              <section>
-                <p>Isikan sesuai dengan form Tensi dan Nadi</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Tensi: <span class="tx-danger">*</span></label>
-                  <input id="tensi" class="form-control" name="tensi" placeholder="Masukkan Tensi" type="text" value="<?php if(!empty($data_tensi)){ echo $data_tensi->tensi; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Nadi: <span class="tx-danger">*</span></label>
-                  <input id="nadi" class="form-control" name="nadi" placeholder="Masukkan Nadi" type="text" value="<?php if(!empty($data_tensi)){ echo $data_tensi->nadi; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">U Tensi dan Nadi: <span class="tx-danger">*</span></label>
-                  <input id="u_nadi" class="form-control" name="u_nadi" placeholder="Masukkan Umum Nadi" type="text" value="<?php if(!empty($data_tensi)){ echo $data_tensi->u_nadi; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Tensi dan Nadi: <span class="tx-danger">*</span></label>
-                  <input id="nb_nadi" class="form-control" name="nb_nadi" placeholder="Masukkan Stakes Nadi" type="text" value="<?php if(!empty($data_tensi)){ echo $data_tensi->nb_nadi; } ?>"  required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Tensi dan Nadi:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_nadi" id="ket_nadi" >
-                    <?php if(!empty($data_tensi)){ echo $data_tensi->ket_nadi; } ?>
-                  </textarea>
-                  
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_nadi" id="submit_nadi" >Simpan</button>
-           
-              </section>
-              <h3>Interne</h3>
-              <section>
-                <p>Isikan sesuai dengan form Interne</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">U Interne: <span class="tx-danger">*</span></label>
-                  <input id="u_interne" class="form-control" name="u_interne" placeholder="Masukkan Umum Interne" type="text" value="<?php if(!empty($data_interne)){ echo $data_interne->u_interne; } ?>"  required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Interne: <span class="tx-danger">*</span></label>
-                  <input id="nb_interne" class="form-control" name="nb_interne" placeholder="Masukkan stakes Interne" type="text" value="<?php if(!empty($data_interne)){ echo $data_interne->nb_interne; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Interne:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_interne" id="ket_interne">
-                    <?php if(!empty($data_interne)){ echo $data_interne->ket_interne; } ?>
-                  </textarea>
-                  
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_interne" id="submit_interne">Simpan</button>
-
-              </section>
-              <h3>EKG</h3>
-              <section>
-                <p>Isikan sesuai dengan form Ergo</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">U EKG: <span class="tx-danger">*</span></label>
-                  <input id="u_ekg" class="form-control" name="u_ekg" placeholder="Masukkan Umum EKG" type="text" value="<?php if(!empty($data_ekg)){ echo $data_ekg->u_ekg; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes EKG: <span class="tx-danger">*</span></label>
-                  <input id="nb_ekg" class="form-control" name="nb_ekg" placeholder="Masukkan stakes EKG" type="text" value="<?php if(!empty($data_ekg)){ echo $data_ekg->nb_ekg; } ?>"  required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan EKG:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_ekg" id="ket_ekg">
-                    <?php if(!empty($data_ekg)){ echo $data_ekg->ket_ekg; } ?>
-                  </textarea>
-                  
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_ekg" id="submit_ekg">Simpan</button>
-              </section>
-              <h3>Ergo</h3>
-              <section>
-                <p>Isikan sesuai dengan form Ergo</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">U Ergo: <span class="tx-danger">*</span></label>
-                  <input id="u_ergo" class="form-control" name="u_ergo" placeholder="Masukkan Umum Ergo" type="text" value="<?php if(!empty($data_ergo)){ echo $data_ergo->u_ergo; } ?>" rrequired>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Ergo: <span class="tx-danger">*</span></label>
-                  <input id="nb_ergo" class="form-control" name="nb_ergo" placeholder="Masukkan Stakes Ergo" type=" text" value="<?php if(!empty($data_ergo)){ echo $data_ergo->nb_ergo; } ?>"  required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Ergo:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_ergo" id="ket_ergo">
-                    <?php if(!empty($data_ergo)){ echo $data_ergo->ket_ergo; } ?>
-                  </textarea>
-                  
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_ergo" id="submit_ergo">Simpan</button>
-              </section>
-              <h3>Spiro</h3>
-              <section>
-                <p>Isikan sesuai dengan form Spiro</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">U Spiro: <span class="tx-danger">*</span></label>
-                  <input id="u_spiro" class="form-control" name="u_spiro" placeholder="Masukkan Umum Spiro" type="text" value="<?php if(!empty($data_spiro)){ echo $data_spiro->u_spiro; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Spiro: <span class="tx-danger">*</span></label>
-                  <input id="nb_spiro" class="form-control" name="nb_spiro" placeholder="Masukkan Umum Spiro" type="text" value="<?php if(!empty($data_spiro)){ echo $data_spiro->nb_spiro; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Spiro:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_spiro" id="ket_spiro">
-                    <?php if(!empty($data_spiro)){ echo $data_spiro->ket_spiro; } ?>
-                  </textarea>
-                  
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_spiro" id="submit_spiro">Simpan</button>
-              </section>
-              <h3>Kulit</h3>
-              <section>
-                <p>Isikan sesuai dengan form Kulit</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">U Kulit: <span class="tx-danger">*</span></label>
-                  <input id="u_kulit" class="form-control" name="u_kulit" placeholder="Masukkan Umum Kulit" type="text" value="<?php if(!empty($data_kulit)){ echo $data_kulit->u_kulit; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Kulit: <span class="tx-danger">*</span></label>
-                  <input id="nb_kulit" class="form-control" name="nb_kulit" placeholder="Masukkan Stakes Kulit" type=" text" value="<?php if(!empty($data_kulit)){ echo $data_kulit->nb_kulit; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Kulit:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_kulit" id="ket_kulit">
-                    <?php if(!empty($data_kulit)){ echo $data_kulit->ket_kulit; } ?>
-                  </textarea>
-                  
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_kulit" id="submit_kulit">Simpan</button>
-              </section>
-              <h3>Rontgen</h3>
-              <section>
-                <p>Isikan sesuai dengan form Rontgen/p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">U Rontgen: <span class="tx-danger">*</span></label>
-                  <input id="u_rontgen" class="form-control" name="u_rontgen" placeholder="Masukkan Umum Rontgen" type="text" value="<?php if(!empty($data_rontgen)){ echo $data_rontgen->u_rontgen; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Rontgen: <span class="tx-danger">*</span></label>
-                  <input id="nb_rontgen" class="form-control" name="nb_rontgen" placeholder="Masukkan Stakes Rontgen" type="text" value="<?php if(!empty($data_rontgen)){ echo $data_rontgen->nb_rontgen; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Rontgen:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_rontgen" id="ket_rontgen">
-                    <?php if(!empty($data_rontgen)){ echo $data_rontgen->ket_rontgen; } ?>
-                  </textarea>
-                  
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_rontgen" id="submit_rontgen">Simpan</button>
-              </section> 
-              <h3>Laboratorium</h3>
-              <section>
-                <p>Isikan sesuai dengan form Lab</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">U LAB: <span class="tx-danger">*</span></label>
-                  <input id="u_lab" class="form-control" name="u_lab" placeholder="Masukkan Umum LAB" type="text" value="<?php if(!empty($data_lab)){ echo $data_lab->u_lab; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes LAB: <span class="tx-danger">*</span></label>
-                  <input id="nb_lab" class="form-control" name="nb_lab" placeholder="Masukkan Stakes LAB" type="text" value="<?php if(!empty($data_lab)){ echo $data_lab->nb_lab; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan LAB:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_lab" id="ket_lab">
-                    <?php if(!empty($data_lab)){ echo $data_lab->ket_lab; } ?>
-                  </textarea>
-                  
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_lab" id="submit_lab">Simpan</button>
-              </section>
-              <h3>Bedah</h3>
-              <section>
-                <p>Isikan sesuai dengan form Bedah</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">U Bedah: <span class="tx-danger">*</span></label>
-                  <input id="u_bedah" class="form-control" name="u_bedah" placeholder="Masukkan Umum Bedah" type="text" value="<?php if(!empty($data_bedah)){ echo $data_bedah->u_bedah; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Bedah: <span class="tx-danger">*</span></label>
-                  <input id="nb_bedah" class="form-control" name="nb_bedah" placeholder="Masukkan Stakes Bedah" type="text" value="<?php if(!empty($data_bedah)){ echo $data_bedah->nb_bedah; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Bedah:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_bedah" id="ket_bedah">
-                    <?php if(!empty($data_bedah)){ echo $data_bedah->ket_bedah; } ?>
-                  </textarea>
-                  
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_bedah" id="submit_bedah">Simpan</button>
-              </section>
-              <h3>USG</h3>
-              <section>
-                <p>Isikan sesuai dengan form USG *Khusus untuk Casis Wanita</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">U USG: <span class="tx-danger">*</span></label>
-                  <input id="u_usg" class="form-control" name="u_usg" placeholder="Masukkan Umum USG" type="text" value="<?php if(!empty($data_usg)){ echo $data_usg->u_usg; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes USG: <span class="tx-danger">*</span></label>
-                  <input id="nb_usg" class="form-control" name="nb_usg" placeholder="Masukkan Stakes USG" type="text" value="<?php if(!empty($data_usg)){ echo $data_usg->nb_usg; } ?>"required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan USG:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_usg" id="ket_usg">
-                    <?php if(!empty($data_usg)){ echo $data_usg->ket_usg; } ?>
-                  </textarea>
-                  
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_usg" id="submit_usg">Simpan</button>
-              </section>
-               <h3>Atas</h3>
-              <section>
-                <p>Isikan sesuai dengan form Atas</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">A Atas: <span class="tx-danger">*</span></label>
-                  <input id="a_atas" class="form-control" name="a_atas" placeholder="Masukkan Atas" type="text" value="<?php if(!empty($data_atas)){ echo $data_atas->a_atas; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Atas: <span class="tx-danger">*</span></label>
-                  <input id="nb_atas" class="form-control" name="nb_atas" placeholder="Masukkan Stakes Atas" type="text" value="<?php if(!empty($data_atas)){ echo $data_atas->nb_atas; } ?>"required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Atas:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_atas" id="ket_atas">
-                    <?php if(!empty($data_atas)){ echo $data_atas->ket_atas; } ?>
-                  </textarea>
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit_atas" name="submit_atas" id="submit_atas">Simpan</button>
-              </section>
-              <h3>Bawah</h3>
-              <section>
-                <p>Isikan sesuai dengan form Bawah</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">B Bawah: <span class="tx-danger">*</span></label>
-                  <input id="b_bawah" class="form-control" name="b_bawah" placeholder="Masukkan Bawah" type="text" value="<?php if(!empty($data_bawah)){ echo $data_bawah->b_bawah; } ?>"  required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Bawah: <span class="tx-danger">*</span></label>
-                  <input id="nb_bawah" class="form-control" name="nb_bawah" placeholder="Masukkan Stakes Bawah" type="text" value="<?php if(!empty($data_bawah)){ echo $data_bawah->nb_bawah; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Bawah:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_bawah" id="ket_bawah">
-                    <?php if(!empty($data_bawah)){ echo $data_bawah->nb_bawah; } ?>
-                  </textarea>
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_bawah" id="submit_bawah">Simpan</button>
-              </section>
-              <h3>THT</h3>
-              <section>
-                <p>Isikan sesuai dengan form THT</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">D THT: <span class="tx-danger">*</span></label>
-                  <input id="t_tht" class="form-control" name="t_tht" placeholder="Masukkan THT" type="text" value="<?php if(!empty($data_tht)){ echo $data_tht->t_tht; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes THT: <span class="tx-danger">*</span></label>
-                  <input id="nb_tht" class="form-control" name="nb_tht" placeholder="Masukkan Stakes THT" type="text" value="<?php if(!empty($data_tht)){ echo $data_tht->nb_tht; } ?>"  required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan THT:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_tht" id="ket_tht">
-                    <?php if(!empty($data_tht)){ echo $data_tht->ket_tht; } ?>
-                  </textarea>
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_tht" id="submit_tht">Simpan</button>
-              </section>
-              <h3>Mata</h3>
-              <section>
-                <p>Isikan sesuai dengan form Mata</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">L Mata: <span class="tx-danger">*</span></label>
-                  <input id="l_mata" class="form-control" name="l_mata" placeholder="Masukkan Mata" type="text" value="<?php if(!empty($data_mata)){ echo $data_mata->l_mata; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Mata: <span class="tx-danger">*</span></label>
-                  <input id="nb_mata" class="form-control" name="nb_mata" placeholder="Masukkan Stakes Mata" type="text" value="<?php if(!empty($data_mata)){ echo $data_mata->nb_mata; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Mata:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_mata" id="ket_mata">
-                    <?php if(!empty($data_mata)){ echo $data_mata->ket_mata; } ?>
-                  </textarea>
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_mata" id="submit_mata">Simpan</button>
-              </section>
-              <h3>Gigi</h3>
-              <section>
-                <p>Isikan sesuai dengan form Gigi</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">G Gigi: <span class="tx-danger">*</span></label>
-                  <input id="g_gigi" class="form-control" name="g_gigi" placeholder="Masukkan Gigi" type="text" value="<?php if(!empty($data_gigi)){ echo $data_gigi->g_gigi; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Gigi: <span class="tx-danger">*</span></label>
-                  <input id="nb_gigi" class="form-control" name="nb_gigi" placeholder="Masukkan Stakes Mata" type="text" value="<?php if(!empty($data_gigi)){ echo $data_gigi->nb_gigi; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Gigi:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_gigi" id="ket_gigi">
-                    <?php if(!empty($data_gigi)){ echo $data_gigi->ket_gigi; } ?>
-                  </textarea>
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_gigi" id="submit_gigi">Simpan</button>
-              </section>
-              <h3>Jiwa</h3>
-              <section>
-                <p>Isikan sesuai dengan form Jiwa</p>
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">J Jiwa: <span class="tx-danger">*</span></label>
-                  <input id="j_jiwa" class="form-control" name="j_jiwa" placeholder="Masukkan Jiwa" type="text" value="<?php if(!empty($data_jiwa)){ echo $data_jiwa->j_jiwa; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Stakes Jiwa: <span class="tx-danger">*</span></label>
-                  <input id="nb_jiwa" class="form-control" name="nb_jiwa" placeholder="Masukkan Stakes Jiwa" type="text" value="<?php if(!empty($data_jiwa)){ echo $data_jiwa->nb_jiwa; } ?>" required>
-                </div><!-- form-group -->
-                <div class="form-group wd-xs-300">
-                  <label class="form-control-label">Keterangan Jiwa:</label>
-                  <textarea rows="3" class="form-control" placeholder="" name="ket_jiwa" id="ket_jiwa">
-                    <?php if(!empty($data_jiwa)){ echo $data_jiwa->nb_jiwa; } ?>
-                  </textarea>
-                </div><!-- form-group -->
-                <button class="btn btn-primary bd-0" type="submit" name="submit_jiwa" id="submit_jiwa">Simpan</button>
-              </section>
 
 
+         <?php  $this->load->view("penilaian/lihat_tinggi_berat_tensi"); ?>
+         <?php  $this->load->view("penilaian/lihat_interne_ekg"); ?>
+         <?php  $this->load->view("penilaian/lihat_ergo_spiro"); ?>
+         <?php  $this->load->view("penilaian/lihat_kulit_rontgen"); ?>
+         <?php  $this->load->view("penilaian/lihat_lab_bedah"); ?>
+         <?php  $this->load->view("penilaian/lihat_usg_atas"); ?>
+         <?php  $this->load->view("penilaian/lihat_bawah_tht"); ?>
+         <?php  $this->load->view("penilaian/lihat_mata_gigi"); ?>
+         <?php  $this->load->view("penilaian/lihat_jiwa"); ?>
+         <?php  $this->load->view("penilaian/lihat_hasil_nilai"); ?>
 
-            </div>
-          </div><!-- section-wrapper -->
 
       </div><!-- container -->
     </div><!-- slim-mainpanel -->
