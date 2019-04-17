@@ -655,7 +655,7 @@ class Penilaian extends CI_Controller {
                             $nb_rontgen, 
                             $nb_kulit,
                             $nb_lab,
-                            $nb_kulit,
+                            // $nb_kulit,
                             $nb_bedah,
                             $nb_usg,
                             $nb_tht
@@ -816,6 +816,19 @@ class Penilaian extends CI_Controller {
 
                 $this->load->view("penilaian/lihat_nilai",$data);
             }
+        }
+
+
+        function laporan(){
+
+            if(_is_user_login($this)){
+                $data['status_penilaian'] = 'active';
+                $data = array();
+                $this->load->model("penilaian_model");
+                $data["penilaian_rikkes"] = $this->penilaian_model->get_penilaian_filter_by_flag_del();
+                $this->load->view("penilaian/laporan",$data);
+            }
+
         }
 
 }
