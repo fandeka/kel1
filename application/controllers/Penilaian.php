@@ -809,6 +809,7 @@ class Penilaian extends CI_Controller {
                 $data['data_mata'] = $this->penilaian_model->get_mata_by_casis($no_casis);
                 $data['data_gigi'] = $this->penilaian_model->get_gigi_by_casis($no_casis);
                 $data['data_jiwa'] = $this->penilaian_model->get_jiwa_by_casis($no_casis);
+                $data['data_sponsor'] = $this->penilaian_model->get_sponsor_by_casis($no_casis);
 
 
                 $data['hasil_nilai'] = $this->penilaian_model->get_hasil_nilai_by_casis($no_casis);

@@ -39,6 +39,7 @@ class Casis extends CI_Controller {
                 $this->form_validation->set_rules('ipk', 'IPK', 'trim|required');
                 $this->form_validation->set_rules('panda', 'Panda', 'trim|required');
                 $this->form_validation->set_rules('kelas', 'Kelas', 'trim|required');
+                $this->form_validation->set_rules('sponsor', 'Sponsorship', 'trim|required');
 
                 if ($this->form_validation->run() == FALSE) 
         		{
@@ -77,6 +78,7 @@ class Casis extends CI_Controller {
                             $ipk = $this->input->post("ipk");
                             $panda = $this->input->post("panda");
                             $kelas = $this->input->post("kelas");
+                            $sponsor = $this->input->post("sponsor");
             
                         
                             $this->load->model("common_model");
@@ -93,6 +95,7 @@ class Casis extends CI_Controller {
                                 "panda"=>$panda,
                                 "kelas"=>$kelas,
                                 "foto"=>$file_name,
+                                "sponsor"=>$sponsor,
                                 'flag_del' => 1,
                                 "created_by"=>_get_current_user_id($this),
                                 "date_created"=>date("Y-m-d H:i:sa")

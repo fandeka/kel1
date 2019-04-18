@@ -53,7 +53,17 @@
                                                   <br> ASAL PANDA 
                                                   <br> JENIS KELAMIN 
                                                   <br> KELAS</th>
-                    <th  colspan="13">Umum</th>
+                    <th  colspan="12">Umum</th>
+                    <th rowspan="2">ATAS</th>
+                    <th rowspan="2">BAWAH</th> 
+                    <th rowspan="2">THT</th> 
+                    <th rowspan="2">MATA</th> 
+                    <th rowspan="2">GIGI</th>
+                    <th rowspan="2">JIWA</th>
+                    <th rowspan="2">SPONSORSHIP</th>
+                    <th rowspan="2">AKSI</th>  
+                   
+                                         
                    
                 </tr>
                 <tr>
@@ -72,8 +82,15 @@
                     <th >LAB</th>
                     <th >BEDAH</th>
                     <th >USG</th>
-                    <th >THT</th>
-                    <th >AKSI</th>                   
+
+<!--                     
+                    <th >BAWAH</th> 
+                    <th >THT</th> 
+                    <th >MATA</th> 
+                    <th >GIGI</th>
+                    <th >JIWA</th>
+                    <th>SPONSORSHIP</th>
+                    <th >AKSI</th>   -->               
                 </tr>
               </thead>
               <?php $no = 1; ?>
@@ -132,41 +149,115 @@
                       ?>
                     </td>
                     <td>
-                      TB / BB
+                      <?php 
+                      
+                      $data['data_interne']=$this->penilaian_model->get_interne_by_casis($casis->no_casis); 
+                      echo $data['data_interne']->nb_interne;
+                      ?>
                     </td>
                     <td>
-                      TB / BB
-                    </td>
-                     <td>
-                      TB / BB
-                    </td>
-                    <td>
-                      TB / BB
-                    </td>
-                     <td>
-                      TB / BB
-                    </td>
-                     <td>
-                      TB / BB
-                    </td>
-                     <td>
-                      TB / BB
+                      <?php 
+                      
+                      $data['data_ekg']=$this->penilaian_model->get_ekg_by_casis($casis->no_casis); 
+                      echo $data['data_ekg']->nb_ekg;
+                      ?>
                     </td>
                     <td>
-                      TB / BB
+                      <?php 
+                      
+                      $data['data_ergo']=$this->penilaian_model->get_ergo_by_casis($casis->no_casis); 
+                      echo $data['data_ergo']->nb_ergo;
+                      ?>
                     </td>
                      <td>
-                      TB / BB
+                      <?php 
+                      
+                      $data['data_spiro']=$this->penilaian_model->get_spiro_by_casis($casis->no_casis); 
+                      echo $data['data_spiro']->nb_spiro;
+                      ?>
                     </td>
                     <td>
-                      TB / BB
+                      <?php 
+                      
+                      $data['data_rontgen']=$this->penilaian_model->get_rontgen_by_casis($casis->no_casis); 
+                      echo $data['data_rontgen']->nb_rontgen;
+                      ?>
+                    </td>
+                     <td>
+                      <?php 
+                      
+                      $data['data_kulit']=$this->penilaian_model->get_kulit_by_casis($casis->no_casis); 
+                      echo $data['data_kulit']->nb_kulit;
+                      ?>
+                    </td>
+                     <td>
+                      <?php
+                      $data['data_lab']=$this->penilaian_model->get_lab_by_casis($casis->no_casis); 
+                      echo $data['data_lab']->nb_lab;
+                      ?>
+                    </td>
+                     <td>
+                      <?php
+                      $data['data_bedah']=$this->penilaian_model->get_bedah_by_casis($casis->no_casis); 
+                      echo $data['data_bedah']->nb_bedah;
+                      ?>
                     </td>
                     <td>
-  
+                      <?php
+                      $data['data_usg']=$this->penilaian_model->get_usg_by_casis($casis->no_casis); 
+                      echo $data['data_usg']->nb_usg;
+                      ?>
                     </td>
+                    <td>
+                      <?php
+                      $data['data_atas']=$this->penilaian_model->get_atas_by_casis($casis->no_casis); 
+                      echo $data['data_atas']->nb_atas;
+                      ?>
+                    </td>
+                    <td>
+                    <?php
+                     
+                      $data['data_bawah']=$this->penilaian_model->get_bawah_by_casis($casis->no_casis); 
+                      echo $data['data_bawah']->nb_bawah;
 
-
-
+                    ?>
+                        
+                    </td>
+                      <td>                    
+                        <?php
+                      $data['data_tht']=$this->penilaian_model->get_tht_by_casis($casis->no_casis); 
+                      echo $data['data_tht']->nb_tht;
+                      ?>
+                      </td>
+                    <td>
+                      <?php
+                      $data['data_mata']=$this->penilaian_model->get_mata_by_casis($casis->no_casis); 
+                      echo $data['data_mata']->nb_mata;
+                      ?>
+                        
+                      </td>
+                    <td>
+                      <?php
+                      $data['data_gigi']=$this->penilaian_model->get_gigi_by_casis($casis->no_casis); 
+                      echo $data['data_gigi']->nb_gigi;
+                      ?>
+                        
+                      </td>
+                    <td>
+                      <?php
+                      $data['data_jiwa']=$this->penilaian_model->get_jiwa_by_casis($casis->no_casis); 
+                      echo $data['data_jiwa']->nb_jiwa;
+                      ?>
+                        
+                      </td>
+                    <td>
+                      <?php
+                      $data['data_sponsor']=$this->penilaian_model->get_sponsor_by_casis($casis->no_casis); 
+                      echo $data['data_sponsor']->sponsor;
+                      ?>
+                        
+                    </td>
+                    <td>Aksi</td>
                   </tr>
                   <?php } ?>
               </tbody>

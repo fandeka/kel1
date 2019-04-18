@@ -31,7 +31,7 @@
           </div><!-- col-6 -->
           <div class="col-lg-6 mg-t-20 mg-lg-t-0">
             <div class="section-wrapper">
-              <label class="section-title">UKG</label>
+              <label class="section-title">EKG</label>
               <p class="mg-b-20 mg-sm-b-40"></p>
               <br>
               <div class="form-layout form-layout-5">

@@ -123,5 +123,10 @@ public function get_penilaian_by_id($id){
         return $q->row();
     }
 
+    public function get_sponsor_by_casis($no_casis){
+        $q = $this->db->query("select * from casis where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
+        return $q->row();
+    }
+
 }
 ?>

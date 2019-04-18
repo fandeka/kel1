@@ -127,22 +127,28 @@
               </div><!-- col-8 -->
               <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
-                  <label class="form-control-label">IPK : <span class="tx-danger">*</span></label>
+                  <label class="form-control-label">IPK: <span class="tx-danger">*</span></label>
                   <input class="form-control" type="text" name="ipk" placeholder="" required>
                 </div>
               </div><!-- col-8 -->
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <div class="form-group bd-t-0-force">
                   <label class="form-control-label">Panda: <span class="tx-danger">*</span></label>
                   <input class="form-control" type="text" name="panda" placeholder="" required>
                 </div>
-              </div><!-- col-8 -->
-              <div class="col-md-6">
+              </div><!-- col-4 --><!-- col-4 -->
+              <div class="col-md-4">
                 <div class="form-group mg-md-l--1 bd-t-0-force">
                   <label class="form-control-label">Kelas: <span class="tx-danger">*</span></label>
                   <input class="form-control" type="text" name="kelas" placeholder="" required>
                 </div>
               </div><!-- col-8 -->
+              <div class="col-md-4">
+                <div class="form-group mg-md-l--1 bd-t-0-force">
+                  <label class="form-control-label">Sponsorship: <span class="tx-danger">*</span></label>
+                  <input class="form-control" type="text" name="sponsor" placeholder="" required>
+                </div>
+              
             </div><!-- row -->
             <div class="form-layout-footer bd pd-20 bd-t-0">
               <button class="btn btn-primary bd-0" type="submit" name="submit">Simpan</button>
