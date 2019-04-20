@@ -174,7 +174,7 @@
 
        <script type="text/javascript">
                 $(document).ready(function() {
-                    $(".kartu").click(function(event) {
+                    $("#datatable1 tbody").on('click','.kartu',function(event) {
 
                         var base = '<?=base_url()?>';
 
