@@ -832,4 +832,19 @@ class Penilaian extends CI_Controller {
 
         }
 
+
+       public function ambil_data(){
+
+          if(_is_user_login($this)){
+
+
+              $search = $this->input->get('q');
+             
+              $this->load->model("penilaian_model");
+              $data["scan"] = $this->penilaian_model->get_casis_on_search($search);
+
+              echo json_encode($data);
+           
+          }
+      }
 }

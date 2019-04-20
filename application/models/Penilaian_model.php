@@ -127,6 +127,15 @@ public function get_penilaian_by_id($id){
         $q = $this->db->query("select * from casis where no_casis='".$no_casis."' and flag_del = 1 order by id desc limit 1");
         return $q->row();
     }
+    
+    function get_casis_on_search($search){
+        $this->db->select('*');
+        $this->db->from('casis');
+        $this->db->like('no_casis', $search);
+        $this->db->where('flag_del', 1);
+        $this->db->limit(1);
+        return $this->db->get()->result_array();
+    }
 
 }
 ?>
