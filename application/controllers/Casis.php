@@ -226,5 +226,21 @@ public function delete_casis($id){
                 $this->load->view("casis/casis_rinci",$data);
         }
     }
+
+
+
+    function cetak_kartu(){
+
+
+        $data = array();
+        $data = array( 'sukses'=>'sukses' );
+        echo json_encode($data);
+
+    }
+
+
+    function get_data_casis(){
+        
+    }
   
 }

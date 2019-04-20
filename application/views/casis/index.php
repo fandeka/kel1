@@ -34,7 +34,8 @@
           <label class="section-title">Daftar Nama Casis</label>
           <p class="mg-b-20 mg-sm-b-40">
             
-            
+          <?php $this->load->view('casis/lihat_kartu'); ?>
+
           </p>
           <div class="row">
             <div class="col-md-6 col-lg-4">
@@ -67,25 +68,27 @@
                     <td>
                     <?php echo $casis->no_casis; ?>
                     </td>
-                   <td> 
+                   <td class="foto" > 
                     <?php
                                     $img = base_url("uploads/default.png");
                                     if($casis->foto != ""){
                                         $img = $this->config->item('base_url').'uploads/foto_casis/'.$casis->foto; 
                                     }  
                                 ?>
-                                <img src="<?php echo $img; ?>" class="img-circle" style="height: 50px; width: 50px;">
+                                <img src="<?php echo $img; ?>" class="img-circle" style="height: 50px; width: 50px;" >
                               </td>
-                    <td>
+                    <td class="nama">
                     <?php echo anchor('casis/casis_rinci/'.$casis->id, $casis->nama, 'title="Detail"'); ?>
                     </td>
                     <td><?php echo $casis->tempat_lahir; ?>, <?php echo $casis->tanggal_lahir; ?></td>
                     <td><?php echo $casis->j_kel; ?></td>
                      <td>
+                      <a href="#" class="btn btn-teal btn-icon rounded-circle kartu" data-toggle="tooltip-teal" data-placement="left" title="" data-original-title="Cetak Kartu"><input type="hidden" value="<?php echo $casis->no_casis;?>" class="no_casis"><div><i class="fa fa-credit-card"></i></div></a>
+                      &nbsp;&nbsp;
                       <a href="<?php echo site_url("casis/edit_casis/".$casis->id); ?>">
                                       <i class="fa fa-pencil"></i></a>
                                        <span></span>   &nbsp&nbsp
-                                      <a href="<?php echo site_url("casis/delete_casis/".$casis->id); ?>" onclick="return confirm('are you sure to delete?')" class=""> 
+                      <a href="<?php echo site_url("casis/delete_casis/".$casis->id); ?>" onclick="return confirm('are you sure to delete?')" class=""> 
                                       <i class="fa fa-trash"></i></a>
                     </td>
                   </tr>
@@ -125,6 +128,9 @@
 
 
         $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+        $('[data-toggle="tooltip-teal"]').tooltip({
+          template: '<div class="tooltip tooltip-teal" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+        });
 
       });
     </script>
@@ -164,6 +170,65 @@
           });
         });
        </script>
+
+
+       <script type="text/javascript">
+                $(document).ready(function() {
+                    $(".kartu").click(function(event) {
+
+                        var base = '<?=base_url()?>';
+
+                        // get_data_casis(no_casis);
+                        var no_casis = $(this).find('.no_casis').val();
+                        var nama = $(this).closest('tr').find('.nama').text();
+                        var foto = $(this).closest('tr').find('.foto img').attr("src");
+
+
+                        console.log(foto);
+
+
+
+
+                        $.ajax({
+                            type: "POST",
+                            url: base + "casis/cetak_kartu",
+                            data:{  "no_casis": no_casis},
+                            dataType: "html",
+                            cache: false,
+                            success: function(data) {
+
+                              console.log(data);
+                              $('#nama').html(nama);
+                              $('#my_image').attr('src',foto)
+                              $('#modaldemo1').modal('show');                             
+
+                            },
+                            error: function (data) {
+                                console.log('An error occurred.');
+                                console.log(data);
+                            }
+                        });
+
+                        event.preventDefault();
+                    });
+                });
+
+                function get_data_casis(no_casis) {
+                    var base = '<?=base_url()?>';
+                    $.ajax({
+                        type: "POST",
+                        url: base + "casis/get_data_casis",
+                        data: ({ 'no_casis' : no_casis }),
+                        dataType: "html",
+                        success: function(data) {
+                            return data;
+                        },
+                        error: function() {
+                            alert('Error occured');
+                        }
+                    });
+                }
+        </script>
 
   </body>
 </html>

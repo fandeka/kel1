@@ -25,5 +25,10 @@ public function get_casis_by_id($id){
         $q = $this->db->query("select * from casis where flag_del = 1 and id = '".$id."'");
         return $q->row();
     }
+
+    function get_casis_by_no_casis($no_casis){
+        $q = $this->db->query("select * from casis where flag_del = 1 and no_casis = '".$no_casis."'");
+        return $q->row();
+    }
 }
 ?>
