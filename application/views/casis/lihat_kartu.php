@@ -21,6 +21,7 @@
            <?php $img = base_url("images/kartu_depan.png");?>
             <img  class="img-circle" src="<?php echo $img; ?>">
             <img id="my_image" class="img-circle" style="position: absolute; top: 270px; left: 220px; height: 250px; width: 250px;">
+            <img id="image_barcode" class="img-circle" style="position: absolute; top: 990px; left: 270px; height: 99px; width: 174px;">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary">Cetak</button>

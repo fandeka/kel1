@@ -183,8 +183,10 @@
                         var nama = $(this).closest('tr').find('.nama').text();
                         var foto = $(this).closest('tr').find('.foto img').attr("src");
 
+                        var barcode_path = base + "uploads/foto_barcode/"+no_casis+'.png';
 
-                        console.log(foto);
+
+                        console.log(barcode_path);
 
 
 
@@ -199,7 +201,9 @@
 
                               console.log(data);
                               $('#nama').html(nama);
-                              $('#my_image').attr('src',foto)
+                              $('#my_image').attr('src',foto);
+                              $('#image_barcode').attr('src',barcode_path);
+
                               $('#modaldemo1').modal('show');                             
 
                             },

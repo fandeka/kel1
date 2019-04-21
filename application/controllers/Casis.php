@@ -228,15 +228,41 @@ public function delete_casis($id){
     }
 
 
-
     function cetak_kartu(){
 
+         if(_is_user_login($this)){
 
-        $data = array();
-        $data = array( 'sukses'=>'sukses' );
-        echo json_encode($data);
+            $data = array();
+
+            $no_casis = $this->input->post('no_casis');
+
+
+            $this->load->library('zend');
+             
+            $this->zend->load('Zend/Barcode');  
+
+            $barcodeOptions = array(
+                'text' => $no_casis, 
+                'barHeight'=> 20,
+                'withBorder' => true,
+                'withQuietZones' => false,
+                'factor'=>2,
+            );
+
+            $file = Zend_Barcode::draw('code128', 'image', $barcodeOptions, array());
+
+
+            imagepng($file,"uploads/foto_barcode/{$no_casis}.png");
+            // $data['barcode'] = "uploads/foto_barcode/{$no_casis}.png";
+            // $data['barcode_path'] = getcwd().'/'.$data['barcode'];
+            
+            $data = array( 'data'=>array('sukses',$no_casis));
+            echo json_encode($data);    
+
+         }
 
     }
+
 
 
     function get_data_casis(){
