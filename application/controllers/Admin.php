@@ -115,26 +115,26 @@ class Admin extends CI_Controller {
         if(_is_user_login($this)){
             $data = array();
 
-            // $this->load->model("users_model");
-            // $this->load->model("personel_model");
-            // $this->load->model("dataadmin_model");
-            // $this->load->model("datanilai_model");
 
-            // $data["pengguna"] = $this->users_model->get_users();
-            // $data["personel"] = $this->personel_model->get_personel_filter_by_flag_del();
-            // $data["dataadmin"] = $this->dataadmin_model->get_dataadmin_filter_by_flag_del();
-            // $data["datanilai"] = $this->datanilai_model->get_datanilai_filter_by_flag_del();
+            $this->load->model("dataadmin_model");
+            $data['jml_casis_pria'] = count($this->dataadmin_model->casis_by_pria());
+            $data['jml_casis_wanita'] = count($this->dataadmin_model->casis_by_wanita());
+            $data['jml_tim_rikkes'] = count($this->dataadmin_model->tim_rikes());
+            $this->load->model("casis_model");
+            $data["casis_rikes"] = $this->casis_model->get_casis_filter_by_flag_del_desc();
+            $this->load->model("tim_model");
+            $data["tim_rikkes"] = $this->tim_model->get_tim_filter_by_flag_del_desc();
 
             
 
-            // $data['count_pengguna'] = count($data["pengguna"]);
-            // $data['count_personel'] = count($data["personel"]);
-            // $data['count_dataadmin'] = count($data["dataadmin"]);
-            // $data['count_datanilai'] = count($data["datanilai"]);
+
+            
 
 
-            // $this->load->view("admin/dashboard",$data);
-            $this->load->view("admin/dashboard");
+
+
+            $this->load->view("admin/dashboard",$data);
+          
         }
     }
 
