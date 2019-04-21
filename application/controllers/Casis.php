@@ -12,12 +12,14 @@ class Casis extends CI_Controller {
 	public function index()
 	{ 
 		if(_is_user_login($this)){
-            
+
             $data = array();
             $data['status_casis'] = 'active';
             $this->load->model("casis_model");
             $data["casis_rikes"] = $this->casis_model->get_casis_filter_by_flag_del();
             $this->load->view("casis/index",$data);
+
+
         }
     }
 
@@ -267,6 +269,16 @@ public function delete_casis($id){
 
     function get_data_casis(){
         
+    }
+
+    function lihat_kartu($no_casis)
+    {
+         if(_is_user_login($this)){
+            $this->load->model("casis_model");
+            $data["casis"] = $this->casis_model->get_casis_by_no_casis($no_casis);
+
+            $this->load->view("casis/preview_kartu",$data);
+        }
     }
   
 }

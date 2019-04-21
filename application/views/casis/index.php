@@ -203,7 +203,7 @@
                               $('#nama').html(nama);
                               $('#my_image').attr('src',foto);
                               $('#image_barcode').attr('src',barcode_path);
-
+                              $('#casis_no').val(no_casis);   
                               $('#modaldemo1').modal('show');                             
 
                             },
@@ -233,6 +233,25 @@
                     });
                 }
         </script>
+
+
+
+        <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#cetak").click(function(event) {
+
+                        var base = '<?=base_url()?>';
+
+                        var casis_no = $('#casis_no').val();
+
+                        window.location.href = "casis/lihat_kartu/"+casis_no;
+   
+
+                        event.preventDefault();
+                    });
+                });
+        </script>
+
 
   </body>
 </html>
