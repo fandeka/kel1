@@ -6,6 +6,37 @@
          
              <?php $img = base_url("images/kartu_depan.png");?>
               <img  class="img-circle" src="<?php echo $img; ?>" style=" height: 9.5cm; width: 5.5cm; ">
+   
+            <div style="position: absolute; top: 3px; left: 20px; right: 20px;">
+                            <h5 id="nama" style="text-align: center; 
+                                              color:white;
+                                              "><img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/LOGO BARU TNI.png"); ?>" alt="IMG" class="img-circle" style="position: absolute; top: 1px; left: 75px; height: 24px; width: 21px;"> 
+            </div>
+
+            <div style="position: absolute; top: 23px; left: 2px; right: 20px;">
+                            <h5 id="nama" style="text-align: center; 
+                                              color:white;
+                                              "><img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/sc.png"); ?>" alt="IMG" class="img-circle" style="position: absolute; top: 7px; left: 75px; height: 26px; width: 18px;"> 
+            </div>
+
+            <div style="position: absolute; top: 23px; left: 2px; right: 20px;">
+                            <h5 id="nama" style="text-align: center; 
+                                              color:white;
+                                              "><img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/laut.png"); ?>" alt="IMG" class="img-circle" style="position: absolute; top: 10px; left: 95px; height: 20px; width: 17px;"> 
+            </div>
+
+            <div style="position: absolute; top: 23px; left: 2px; right: 20px;">
+                            <h5 id="nama" style="text-align: center; 
+                                              color:white;
+                                              "> <img src="<?php echo base_url($this->config->item("theme_admin")."/login/images/1200px-Insignia_of_the_Indonesian_Air_Force.svg.png"); ?>" alt="IMG" class="img-circle" style="position: absolute; top: 8px; left: 115px; height: 23px; width: 17px;"> 
+            </div>
+
+
+            <div style="position: absolute; top: 30px; left: 20px; right: 20px;">
+                            <h5 id="nama" style="text-align: center; 
+                                              color:white;
+                                              ">CASIS PA PK 2019</h5> 
+            </div>
 
             <div style="position: absolute; top: 190px; left: 20px; right: 20px;">
                             <h5 id="nama" style="text-align: center; 
