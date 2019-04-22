@@ -245,13 +245,14 @@ public function delete_casis($id){
 
             $barcodeOptions = array(
                 'text' => $no_casis, 
-                'barHeight'=> 20,
-                'withBorder' => true,
-                'withQuietZones' => false,
-                'factor'=>2,
+                // 'barHeight'=> 20,
+                // 'withBorder' => false,
+                // 'withQuietZones' => true,
+                // 'factor'=>2,
+                'transparentBackground' => true
             );
 
-            $file = Zend_Barcode::draw('code128', 'image', $barcodeOptions, array());
+            $file = Zend_Barcode::draw('code39', 'image', $barcodeOptions, array());
 
 
             imagepng($file,"uploads/foto_barcode/{$no_casis}.png");
