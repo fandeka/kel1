@@ -14,15 +14,20 @@
 
             <h5 class=""><a href="" class="tx-inverse hover-primary">Kartu</a></h5>
             <div>
+              
+              <h2 class="" style="position: relative;
+                                              top: 150px;
+                                              text-align: center; 
+                                              color:white;">CASIS PA PK 2019</h2>
               <h1 id="nama" class="" style="position: relative;
-                                              top: 500px;
+                                              top: 600px;
                                               text-align: center; 
                                               color:white;">Nama</h1>
 
          
              <?php $img = base_url("images/kartu_depan.png");?>
               <img  class="img-circle" src="<?php echo $img; ?>">
-              <img id="my_image" class="img-circle" style="position: absolute; top: 270px; left: 220px; height: 250px; width: 250px;">
+              <img id="my_image" class="img-circle" style="position: absolute; top: 300px; left: 220px; height: 250px; width: 250px;">
               <img id="image_barcode" class="img-circle" style="position: absolute; top: 990px; left: 270px; height: 99px; width: 174px;">
               <input type="hidden" id="casis_no">
               </div>
