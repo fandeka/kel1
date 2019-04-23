@@ -31,6 +31,11 @@
 
         <div class="section-wrapper">
 
+          <p class="mg-b-20 mg-sm-b-40"></p>
+          <br>
+
+          <?php $this->load->view('penilaian/search_nilai'); ?>
+
           <label class="section-title">Penilaian</label>
           <p class="mg-b-20 mg-sm-b-40"> <font color='#0e72f3'><i class="icon ion-calculator"></i></font> Untuk melakukan penilaian, silahkan Anda klik button <font color='#0e72f3'>biru</font> di samping setiap nama  </p>
           <p class="mg-b-20 mg-sm-b-40"> <font color='#0ef392'><i class="icon ion-pie-graph"></i></font> Untuk melihat hasil nilai, silahkan Anda klik button <font color='#0ef392'>hijau</font> di samping setiap nama  </p>
@@ -41,7 +46,7 @@
               <thead>
                 <tr>
                     <th class="wd-5p">No</th>
-                    <th class="wd-5p">NoCasis</th>
+                    <th class="wd-5p">No Casis</th>
                     <th class="wd-5p">Foto</th>
                     <th class="wd-5p">Nama</th>
                     <th class="wd-5p">TTL</th>
@@ -73,9 +78,17 @@
                     <td><?php echo $casis->tempat_lahir; ?>, <?php echo $casis->tanggal_lahir; ?></td>
                     <td><?php echo $casis->j_kel; ?></td>
                     <td>
-                      <a href="<?php echo site_url("penilaian/lihat_nilai"); ?>" class="btn btn-teal btn-icon rounded-circle" data-toggle="tooltip-teal" data-placement="left" title="" data-original-title="Hasil Penilaian"><div><i class="icon ion-pie-graph"></i></div></a>
+                      <a href="<?php echo site_url("penilaian/lihat_nilai/".$casis->id); ?>" class="btn btn-teal btn-icon rounded-circle" data-toggle="tooltip-teal" data-placement="left" title="" data-original-title="Hasil Penilaian"><div><i class="icon ion-pie-graph"></i></div></a>
                       &nbsp;&nbsp;
+                      <?php 
+                      $this->load->model("penilaian_model");
+                      $data['hasil_nilai'] = $this->penilaian_model->get_hasil_nilai_by_casis($casis->no_casis);
+                      if (empty($data['hasil_nilai'])) { ?>
+                      
                       <a href="<?php echo site_url("penilaian/add_nilai/".$casis->id); ?>" class="btn btn-primary btn-icon rounded-circle" data-toggle="tooltip-primary" data-placement="right" title="" data-original-title="Beri Penilaian"><div><i class="icon ion-calculator"></i></div></a>
+
+
+                      <?php }?>
 
                     </td>
 
@@ -168,6 +181,71 @@
           });
         });
        </script>
+
+        <script>
+  $(function(){
+      'use strict';
+        
+        $(".select2").select2({
+            ajax: {
+                
+                url: '<?=base_url()?>' + "penilaian/ambil_data",
+                dataType: 'json',
+                type: "GET",
+                delay: 800,
+                data: function (params) {
+                  console.log(params);
+                    return {
+                        q: params.term
+                    };
+                },
+                processResults: function (data) {
+                    console.log(data.scan);
+
+                    var nama = data.scan[0].nama;
+                    var foto = data.scan[0].foto;
+                    var no_casis = data.scan[0].no_casis;
+                    var tempat = data.scan[0].tempat_lahir;
+                    var tanggal_lahir = data.scan[0].tanggal_lahir;
+                    var program = data.scan[0].program;
+                    var universitas = data.scan[0].universitas;
+                    var ipk = data.scan[0].ipk;
+                    var panda = data.scan[0].panda;
+                    var kelas = data.scan[0].kelas;
+                    var j_kel = data.scan[0].j_kel;
+                    var id = data.scan[0].id;
+                    
+
+                    $('#h1').html(nama);
+                    $('#no_casis').html(no_casis);
+                    $('#tempat').html(tempat);
+                    $('#tanggal_lahir').html(tanggal_lahir);
+                    $('#program').html(program);
+                    $('#universitas').html(universitas);
+                    $('#ipk').html(ipk);
+                    $('#panda').html(panda);
+                    $('#kelas').html(kelas);
+                    $('#j_kel').html(j_kel);
+                    
+                    $("#my_image").attr("src","<?=base_url()?>"+"uploads/foto_casis/"+foto);
+                    $("#nilai").attr("href","<?=base_url()?>"+"penilaian/add_nilai/"+id);
+                    $('#modaldemo6').modal('show');
+                    
+                    return {
+                        results: data.res
+                    };
+                }
+            },
+            allowClear: true,
+            minimumInputLength: 4
+           });
+  });
+
+
+
+
+
+        </script>
 
   </body>
 </html>

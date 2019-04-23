@@ -26,7 +26,7 @@
                       <ul>
                         <li><a href="<?php echo site_url("casis/add_casis"); ?>">Tambah Calon Siswa</a></li>
                         <li><a href="<?php echo site_url("casis"); ?>">Data Calon Siswa</a></li>
-                        <li><a href="#">Upload Calon Siswa</a></li>
+                        <!-- <li><a href="#">Upload Calon Siswa</a></li> -->
                       </ul>
                     </div><!-- col -->
                   </div><!-- row -->
@@ -42,12 +42,12 @@
             <div class="sub-item">
               <ul>
                 <li><a href="<?php echo site_url("penilaian/index"); ?>">Penilaian</a></li>
-                <!-- <li><a href="<?php echo site_url("penilaian/add_penilaian"); ?>">Hasil Tes</a></li> -->
+                <!-- <li><a href="<?php // echo site_url("penilaian/add_penilaian"); ?>">Hasil Tes</a></li> -->
               </ul>
             </div><!-- dropdown-menu -->
           </li>
           <li class="nav-item with-sub">
-            <a class="nav-link" href="page-messages.html">
+            <a class="nav-link" href="<?php echo site_url("penilaian/laporan"); ?>">
               <i class="icon ion-document-text"></i>
               <span>Laporan</span>
             </a>

@@ -10786,7 +10786,8 @@ textarea.parsley-success:focus {
 /* ############### Rickshaw ############### */
 /* ---------------------------------------- */
 .rickshaw_graph svg:not(:root) {
-  overflow: visible; }
+  overflow: visible; 
+    background: linear-gradient(to right, #fdfc47, #24fe41); }
 
 .rickshaw_graph svg {
   overflow-y: visible;
@@ -11869,7 +11870,7 @@ textarea.parsley-success:focus {
 
 .section-wrapper {
   border: 1px solid #ced4da;
-  background-color: #fff;
+  background: linear-gradient(to right, #ff4e50, #f9d423);
   padding: 20px; }
   @media (min-width: 576px) {
     .section-wrapper {
@@ -12603,7 +12604,7 @@ textarea.parsley-success:focus {
 .dash-headline-item-one {
   height: 400px;
   position: relative;
-  background-color: #fff;
+  background: linear-gradient(to right, #ff4e50, #f9d423);
   border: 1px solid #ced4da;
   display: flex;
   align-items: flex-end; }
@@ -12773,7 +12774,7 @@ textarea.parsley-success:focus {
 .dash-headline-item-three {
   height: 280px;
   position: relative;
-  background-color: #fff;
+  background: linear-gradient(to right, #f09819, #edde5d);
   border: 1px solid #ced4da;
   display: flex;
   align-items: flex-end; }
@@ -12834,9 +12835,9 @@ textarea.parsley-success:focus {
         border-left: 1px solid #dee2e6;
         border-top: 0; } }
   .card-dash-one .row > div:nth-child(odd) {
-    background-color: #fcfcfc; }
+    background-color: #c2ef0a; }
   .card-dash-one .row > div:nth-child(even) {
-    background-color: #f8f9fa; }
+    background-color: #34e919cc; }
 
 .card-dash-one .icon {
   font-size: 72px;
@@ -14995,7 +14996,7 @@ textarea.parsley-success:focus {
 
 .card-table .card-header {
   padding: 20px;
-  background-color: transparent;
+ background: linear-gradient(to right, #fdfc47, #24fe41);
   border-bottom: 1px solid #dee2e6; }
   .card-table .card-header .slim-card-title {
     margin-bottom: 0; }
@@ -34402,6 +34403,7 @@ a.hover-white-8:hover, a.hover-white-8:focus {
   font-size: 10px; }
 
 .tx-10-force {
+
   font-size: 10px !important; }
 
 .tx-11 {

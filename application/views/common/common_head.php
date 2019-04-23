@@ -9,7 +9,7 @@
     <meta name="twitter:creator" content="@themepixels">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Slim">
-    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="twitter:description" content="Urikkes Werving TNI">
     <meta name="twitter:image" content="http://themepixels.me/slim/img/slim-social.png">
 
     <!-- Facebook -->
@@ -27,7 +27,7 @@
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="author" content="ThemePixels">
 
-    <title>Slim Responsive Bootstrap 4 Admin Template</title>
+    <title>Urikkes Wearving TNI</title>
 
 
 

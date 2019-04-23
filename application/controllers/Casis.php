@@ -12,12 +12,14 @@ class Casis extends CI_Controller {
 	public function index()
 	{ 
 		if(_is_user_login($this)){
-            
+
             $data = array();
             $data['status_casis'] = 'active';
             $this->load->model("casis_model");
             $data["casis_rikes"] = $this->casis_model->get_casis_filter_by_flag_del();
             $this->load->view("casis/index",$data);
+
+
         }
     }
 
@@ -39,6 +41,7 @@ class Casis extends CI_Controller {
                 $this->form_validation->set_rules('ipk', 'IPK', 'trim|required');
                 $this->form_validation->set_rules('panda', 'Panda', 'trim|required');
                 $this->form_validation->set_rules('kelas', 'Kelas', 'trim|required');
+                $this->form_validation->set_rules('sponsor', 'Sponsorship', 'trim|required');
 
                 if ($this->form_validation->run() == FALSE) 
         		{
@@ -77,6 +80,7 @@ class Casis extends CI_Controller {
                             $ipk = $this->input->post("ipk");
                             $panda = $this->input->post("panda");
                             $kelas = $this->input->post("kelas");
+                            $sponsor = $this->input->post("sponsor");
             
                         
                             $this->load->model("common_model");
@@ -93,6 +97,7 @@ class Casis extends CI_Controller {
                                 "panda"=>$panda,
                                 "kelas"=>$kelas,
                                 "foto"=>$file_name,
+                                "sponsor"=>$sponsor,
                                 'flag_del' => 1,
                                 "created_by"=>_get_current_user_id($this),
                                 "date_created"=>date("Y-m-d H:i:sa")
@@ -221,6 +226,59 @@ public function delete_casis($id){
                 $data['casis_rinci']  = $this->casis_model->get_casis_rinci_filter_by_flag_del($id);
 
                 $this->load->view("casis/casis_rinci",$data);
+        }
+    }
+
+
+    function cetak_kartu(){
+
+         if(_is_user_login($this)){
+
+            $data = array();
+
+            $no_casis = $this->input->post('no_casis');
+
+
+            $this->load->library('zend');
+             
+            $this->zend->load('Zend/Barcode');  
+
+            $barcodeOptions = array(
+                'text' => $no_casis, 
+                // 'barHeight'=> 20,
+                // 'withBorder' => false,
+                // 'withQuietZones' => true,
+                // 'factor'=>2,
+                'transparentBackground' => true
+            );
+
+            $file = Zend_Barcode::draw('code39', 'image', $barcodeOptions, array());
+
+
+            imagepng($file,"uploads/foto_barcode/{$no_casis}.png");
+            // $data['barcode'] = "uploads/foto_barcode/{$no_casis}.png";
+            // $data['barcode_path'] = getcwd().'/'.$data['barcode'];
+            
+            $data = array( 'data'=>array('sukses',$no_casis));
+            echo json_encode($data);    
+
+         }
+
+    }
+
+
+
+    function get_data_casis(){
+        
+    }
+
+    function lihat_kartu($no_casis)
+    {
+         if(_is_user_login($this)){
+            $this->load->model("casis_model");
+            $data["casis"] = $this->casis_model->get_casis_by_no_casis($no_casis);
+
+            $this->load->view("casis/preview_kartu",$data);
         }
     }
   

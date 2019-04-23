@@ -16,9 +16,19 @@ class Dataadmin_model extends CI_Model{
         return $q;
     }
 
-    public function get_personel_by_id($id){
-        $q = $this->db->query("select * from personel where  id = '".$id."' limit 1");
-        return $q->row();
+    public function casis_by_pria(){
+        $q = $this->db->query("select * from casis where  j_kel= 'Pria' and YEAR(date_created) = YEAR(CURDATE()) and flag_del = 1");
+        return $q->result();
+    }
+
+    public function casis_by_wanita(){
+        $q = $this->db->query("select * from casis where  j_kel= 'Wanita' and YEAR(date_created) = YEAR(CURDATE()) and flag_del = 1");
+        return $q->result();
+    }
+
+    public function tim_rikes(){
+        $q = $this->db->query("select * from tim where YEAR(date_created) = YEAR(CURDATE()) and flag_del = 1");
+        return $q->result();
     }
 
 
