@@ -1,20 +1,5 @@
     <!-- BASIC MODAL -->
-<style>
 
-
-@media print {
-
-
- div {
-
-
-       color: white !important;
-
-
-   }
-
-
-</style>
     <div id="modaldemo1" class="modal fade"  >
       <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <form>
@@ -34,11 +19,11 @@
               <h2 class="" style="position: relative;
                                               top: 250px;
                                               text-align: center; 
-                                              color:white;">CASIS PA PK 2019</h2>
+                                              color:yellow;">CASIS PA PK <?php echo date('Y'); ?></h2>
               <h1 id="nama" class="" style="position: relative;
                                               top: 620px;
                                               text-align: center; 
-                                              color:white;">Nama</h1>
+                                              color:yellow;">Nama</h1>
 
          
              <?php $img = base_url("images/kartu_depan.png");?>
