@@ -1,4 +1,20 @@
     <!-- BASIC MODAL -->
+<style>
+
+
+@media print {
+
+
+ div {
+
+
+       color: white !important;
+
+
+   }
+
+
+</style>
     <div id="modaldemo1" class="modal fade"  >
       <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <form>
